@@ -1,0 +1,16 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="shortcut icon" type="image/x-icon" href="@Url.Content("~/Content/Images/favicon.ico")"/>
+    <title>@ViewBag.Title</title>
+    @RenderSection("scripts", false)
+    @RenderSection("styles", false)
+</head>
+<body>
+    @RenderBody()
+</body>
+</html>

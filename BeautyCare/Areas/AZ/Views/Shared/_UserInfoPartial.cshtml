@@ -1,0 +1,25 @@
+﻿<a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="#">
+    <span class="glyphicon glyphicon-user">
+    </span>&nbsp;&nbsp;@User.Identity.Name&nbsp;<span class="caret"></span>
+</a>
+<div class="dropdown-menu">
+    @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { area = "AZ", id = "LogoutForm", style = "display:inline;" }))
+    { @Html.AntiForgeryToken()
+        <ul>
+@*
+    <li>
+        <a class="modal-form" href="/AZ/Security/Manage">Профиль</a>
+    </li>
+*@
+    <li>
+        @Html.ActionLink("Изменить пароль", "ChangePassword", "Account", new { Area = "AZ", Login = User.Identity.Name }, new { @class = "dialog-form" })
+    </li>
+
+            <li class="divider"></li>
+            <li>
+                <a href="javascript:document.getElementById('LogoutForm').submit()">Выйти</a>
+            </li>
+        </ul>
+    }
+</div>
+

@@ -1,0 +1,10 @@
+﻿@model int
+
+@{var controllername = Url.RequestContext.RouteData.Values["controller"].ToString();}
+<h2></h2>
+
+<div class="contenthead">
+    @Html.ActionLink("Создать", "CreateDependent", new { id = Model }, new { @id = "create" + controllername + "button", @class = "button dialog-form", @targetupdate = "#" + controllername + "Grid" })
+</div>
+
+@{Html.UpdatePanel("GridByReferenceId", controllername, new { id = Model }, new { id = controllername + "Grid", @class = "contentbody mvcgridpanel" });}

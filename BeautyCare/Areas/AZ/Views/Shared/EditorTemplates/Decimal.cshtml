@@ -1,0 +1,13 @@
+﻿@functions{
+    private object ModelValue {
+        get {
+            if (ViewData.TemplateInfo.FormattedModelValue == ViewData.ModelMetadata.Model) {
+                return String.Format(System.Globalization.CultureInfo.CurrentCulture,
+                                     "{0:0.00}", ViewData.ModelMetadata.Model);
+            }
+            return ViewData.TemplateInfo.FormattedModelValue;
+        }
+    }
+}
+@{string cls = ViewData.ModelMetadata.IsRequired ? ("required" + ((decimal)ViewData.ModelMetadata.Model > 0 ? " valid" : "")) : "";}
+@Html.TextBox("", ModelValue, new { @class = "number " + cls, maxlength="20" })

@@ -1,0 +1,84 @@
+@font-face {
+    font-family: 'CorporateACyrRegular';
+    src: url('../Fonts/corporateacon-reg-webfont.eot');
+    src: url('../Fonts/corporateacon-reg-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../Fonts/corporateacon-reg-webfont.woff') format('woff'),
+         url('../Fonts/corporateacon-reg-webfont.ttf') format('truetype'),
+         url('../Fonts/corporateacon-reg-webfont.svg#corporate_a_condensedregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'corporate_sregular';
+    src: url('../Fonts/corporates-regular-webfont.eot');
+    src: url('../Fonts/corporates-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../Fonts/corporates-regular-webfont.woff2') format('woff2'),
+         url('../Fonts/corporates-regular-webfont.woff') format('woff'),
+         url('../Fonts/corporates-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CorpS_Regular';
+    src: url('../fonts/tv/corporateS_regular.eot');
+    src: url('../fonts/tv/corporateS_regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/tv/corporateS_regular.woff') format('woff'),
+         url('../fonts/tv/corporateS_regular.ttf') format('truetype'),
+         url('../fonts/tv/corporateS_regular.svg#corporate_a_condensedregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'for_smartbold';
+    src: url('../Fonts/forsmartbold.eot');
+    src: url('../Fonts/forsmartbold.eot?#iefix') format('embedded-opentype'),
+         url('../Fonts/forsmartbold.woff2') format('woff2'),
+         url('../Fonts/forsmartbold.woff') format('woff'),
+         url('../Fonts/forsmartbold.ttf') format('truetype'),
+         url('../Fonts/forsmartbold.svg#for_smartbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'for_smartlight';
+    src: url('../Fonts/forsmartlight.eot');
+    src: url('../Fonts/forsmartlight.eot?#iefix') format('embedded-opentype'),
+         url('../Fonts/forsmartlight.woff2') format('woff2'),
+         url('../Fonts/forsmartlight.woff') format('woff'),
+         url('../Fonts/forsmartlight.ttf') format('truetype'),
+         url('../Fonts/forsmartlight.svg#for_smartlight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'for_smartpicto';
+    src: url('../Fonts/forsmartpicto.eot');
+    src: url('../Fonts/forsmartpicto.eot?#iefix') format('embedded-opentype'),
+         url('../Fonts/forsmartpicto.woff2') format('woff2'),
+         url('../Fonts/forsmartpicto.woff') format('woff'),
+         url('../Fonts/forsmartpicto.ttf') format('truetype'),
+         url('../Fonts/forsmartpicto.svg#for_smartpicto') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'for_smartspecial';
+    src: url('../Fonts/forsmartspecial.eot');
+    src: url('../Fonts/forsmartspecial.eot?#iefix') format('embedded-opentype'),
+         url('../Fonts/forsmartspecial.woff2') format('woff2'),
+         url('../Fonts/forsmartspecial.woff') format('woff'),
+         url('../Fonts/forsmartspecial.ttf') format('truetype'),
+         url('../Fonts/forsmartspecial.svg#for_smartspecial') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}

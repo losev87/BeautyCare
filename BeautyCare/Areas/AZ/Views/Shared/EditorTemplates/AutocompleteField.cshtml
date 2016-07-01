@@ -1,0 +1,18 @@
+﻿@model AutocompleteField
+
+@{ var target = new TargetPropertyAttribute("Model");
+   var autocomplete = GetAutocompleteAttribute();
+
+   string cls = ViewData.ModelMetadata.IsRequired ? ("required" + (!string.IsNullOrEmpty(Convert.ToString(ViewData.TemplateInfo.FormattedModelValue)) ? " valid" : "")) : "";
+   cls += " auto-complete-name";
+   Dictionary<string, object> attributes = new Dictionary<string, object>();
+   attributes["class"] = cls;
+   attributes["action"] = Url.Action(autocomplete.Action, autocomplete.Controller);
+
+   string id = Model != null ? Model.Id.ToString() : "";
+   string name = Model != null ? Model.Name : "";
+   string propertyName = ViewData.ModelMetadata.PropertyName;
+}
+@Html.TextBoxFor(m => m.Name, attributes)
+@Html.HiddenFor(m => m.Id, new { @class = "auto-complete-value" })
+

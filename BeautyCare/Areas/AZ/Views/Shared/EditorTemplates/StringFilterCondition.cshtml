@@ -1,0 +1,13 @@
+﻿@model StringFilterCondition
+@{  int index = (int)ViewData["index"];
+    string condition = Model.Value != null ? Model.Value.Condition : "Contains";
+    var inputName = Model.GetInputName(index, "Values[0]");
+    var value = Model.Value != null ? Model.Value.Values[0] : ""; }
+<dt>
+<label>@Model.Caption </label>
+<input type="hidden" name="@Model.GetInputName(index, "Condition")" value="@condition" />
+<input type="hidden" name="@Model.GetInputName(index, "Column")" value="@Model.Column" />
+</dt>
+<dd>
+<input type="text" name="@inputName" value="@value" class="text" />
+</dd>

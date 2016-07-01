@@ -1,0 +1,27 @@
+﻿@model IEnumerable<SelectListItem>
+@functions{
+    TokenInputAttribute GetTokenInputAttribute()
+    {
+        var tokenInputAttribute = new TokenInputAttribute(ViewData.ModelMetadata.PropertyName);
+
+        if (ViewData.ModelMetadata.AdditionalValues.ContainsKey("TokenInputAttribute"))
+        {
+            tokenInputAttribute = (TokenInputAttribute)ViewData.ModelMetadata.AdditionalValues["TokenInputAttribute"];
+        }
+
+        return tokenInputAttribute;
+    }
+}            
+
+@{TokenInputAttribute tokenInputAttribute = GetTokenInputAttribute();}
+<select class="tokenInput" id="@tokenInputAttribute.TargetProperty" name="@tokenInputAttribute.TargetProperty" data-action="@Url.Action(tokenInputAttribute.Action, tokenInputAttribute.Controller)" multiple="multiple">
+    @{
+        if(ViewData.Model!=null)
+        {
+            foreach (SelectListItem item in ViewData.Model.Where(i=>i.Selected))
+            {
+            <option value="@item.Value" selected="selected">@item.Text</option>
+            }
+        }
+        }
+</select>

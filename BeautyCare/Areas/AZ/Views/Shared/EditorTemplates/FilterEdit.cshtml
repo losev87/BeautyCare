@@ -1,0 +1,27 @@
+﻿@model IntraVision.Web.Mvc.Controls.Filter.FilterEdit
+<div class="save-filter">
+    <h2>Сохранить фильтр</h2>
+    @{ Html.EnableClientValidation(); }
+    @using (Html.BeginForm("SaveFilter", ViewContext.RouteData.Values["controller"].ToString(), FormMethod.Post, new { @class = "ajax-form" }))
+      { 
+      <dl>
+      <dt>@Html.LabelFor(m=>m.Filters) </dt>
+      <dd>@Html.EditorFor(m=>m.Filters) </dd>
+
+      <dt>@Html.LabelFor(m=>m.Name) </dt>
+      <dd>
+      @Html.EditorFor(m=>m.Name) 
+      @Html.ValidationMessageFor(m=>m.Name) 
+      </dd>
+
+      <dt></dt>
+      <dd><label>@Html.EditorFor(m=>m.Shared) Общий фильтр</label></dd>
+      </dl>
+      <div class="form-bottom">
+        <button type="submit">Сохранить</button>
+        <a href="javascript:;;" class="save-filter-hide">Отмена</a>
+      </div>
+    } 
+</div>
+
+

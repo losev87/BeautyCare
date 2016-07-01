@@ -1,0 +1,7 @@
+﻿@model string
+  @Html.TextBox("")    
+  @Html.ActionLinkWithImage<AccountController>(a => a.RegisterAuthor(), "~/Images/arrow_refresh.png", new { title="Дайте другую картинку", width="16", height="16" }, new {@id="recapture"})
+  <br />
+  @Html.Image("~/captcha.aspx", new {@id="captchapic"})
+  <div class="description">Буквы вводятся с учетом регистра</div>
+

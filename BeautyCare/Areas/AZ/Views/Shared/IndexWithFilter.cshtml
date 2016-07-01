@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/AZ/Views/Shared/_LayoutAdminWithFilter.cshtml";
+
+    var controllername = Url.RequestContext.RouteData.Values["controller"];
+}
+
+@section RightSideBar{
+    @{Html.UpdatePanel("Filter", new { id = controllername + "Filter", @class = "filterpanel" });}
+}
+
+<h2></h2>
+<div class="contenthead">
+    @Html.ActionLink("Создать", "Create", null, new { @id = "create" + controllername + "button", @class = "button dialog-form", @targetupdate = "#" + controllername + "Grid" })
+</div>
+
+@{
+    Html.UpdatePanel("Grid", new { id = controllername + "Grid", @class = "contentbody mvcgridpanel" });
+}

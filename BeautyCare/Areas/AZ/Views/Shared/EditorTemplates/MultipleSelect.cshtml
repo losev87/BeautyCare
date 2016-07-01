@@ -1,0 +1,48 @@
+﻿@model IEnumerable<SelectListItem>
+    
+
+@{ 
+    var targetProperty = this.ViewData.ModelMetadata.PropertyName;
+    var targetPropertyAttribute = this.ViewData.ModelMetadata.ContainerType.GetProperty(this.ViewData.ModelMetadata.PropertyName).GetCustomAttributes(typeof(TargetPropertyAttribute), true);
+    if (targetPropertyAttribute.Any())
+    {
+        targetProperty = ((TargetPropertyAttribute)targetPropertyAttribute.First()).TargetProperty;
+    }
+
+    
+    var forRolePropertyAttribute = this.ViewData.ModelMetadata.ContainerType.GetProperty(this.ViewData.ModelMetadata.PropertyName).GetCustomAttributes(typeof(ForRolePropertyAttribute), true);
+    var forRoleProperty = "";
+    if (forRolePropertyAttribute.Any())
+    {
+        forRoleProperty = ((ForRolePropertyAttribute)forRolePropertyAttribute.First()).ForRoleProperty;
+    }
+}
+<div class="checklist">
+    <ul id="@targetProperty">
+    @{
+        if (Model != null && Model.Count() > 0)
+        {
+            foreach (var option in Model)
+            {
+                <li>
+                    <label>
+                    @if (option.Selected) 
+                    { 
+                        <input type="checkbox" name="@targetProperty" value="@option.Value " checked="checked" @(forRoleProperty != "" ? (!User.IsInRole(forRoleProperty) ? "disabled=disabled" : "") : "") />
+                    } 
+                    else 
+                    { 
+                        <input type="checkbox" name="@targetProperty" value="@option.Value " @(forRoleProperty != "" ? (!User.IsInRole(forRoleProperty) ? "disabled=disabled" : "") : "") />
+                    }
+                    @option.Text 
+                    </label>
+                </li>
+            }
+        }
+        else 
+        {
+          <li><label>Нет элементов в списке</label></li>  
+        }
+        }
+    </ul>
+</div> 

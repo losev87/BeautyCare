@@ -1,0 +1,19 @@
+﻿@model IDictionary<long,string>
+<div class="one-to-many">
+<ul>
+@{  string propertyName = ViewData.ModelMetadata.PropertyName;
+    int i=0;
+    foreach(var key in Model.Keys){ 
+    <li>
+        <input type="hidden" name="@string.Format("{0}[{1}].Key",propertyName,i)" value="@key" />
+        <input type="text" name="@string.Format("{0}[{1}].Value",propertyName,i)" value="@Model[key]" />
+        <span class="remove" title="Удалить"></span>
+    </li>
+ i++; } }
+<li>
+    <input type="hidden" name="@string.Format("{0}[{1}].Key",propertyName,i)" value="-1" />
+    <input type="text" name="@string.Format("{0}[{1}].Value",propertyName,i)"/>
+    <span class="add" title="Добавить"></span>
+</li>
+</ul>
+</div>

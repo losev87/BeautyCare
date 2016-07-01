@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/AZ/Views/Shared/_LayoutAdmin.cshtml";
+
+    var controllername = Url.RequestContext.RouteData.Values["controller"];
+}
+
+<h2></h2>
+<div class="contenthead">
+    @Html.ActionLink("Создать", "Create", null, new { @id = "create" + controllername + "button", @class = "button dialog-form", @targetupdate = "#" + controllername + "Grid" })
+</div>
+
+@{
+    Html.UpdatePanel("Grid", new { id = controllername + "Grid", @class = "contentbody mvcgridpanel" });
+}

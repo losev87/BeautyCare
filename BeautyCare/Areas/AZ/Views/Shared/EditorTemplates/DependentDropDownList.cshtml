@@ -1,0 +1,26 @@
+﻿@model IEnumerable<SelectListItem>
+
+@{ var attribute = new TargetPropertyAttribute(ViewData.ModelMetadata.PropertyName);
+   if (ViewData.ModelMetadata.AdditionalValues.ContainsKey("TargetPropertyAttribute"))
+   {
+       attribute = (TargetPropertyAttribute)ViewData.ModelMetadata.AdditionalValues["TargetPropertyAttribute"];
+   }
+
+   var dependentDropDownAttribute = (DependentDropDownAttribute)ViewData.ModelMetadata.AdditionalValues["DependentDropDownAttribute"];
+}
+<select id="@attribute.TargetProperty" name="@attribute.TargetProperty" data-parent-id="@dependentDropDownAttribute.ParentId" data-action="@Url.Action(dependentDropDownAttribute.Action, new { Id = 0 })" class="dependent-drop-down">
+    @if (Model != null)
+    {
+        foreach (SelectListItem item in Model)
+        {
+            if (item.Selected == true)
+            {
+                <option value="@item.Value" selected="selected">@item.Text </option>
+            }
+            else
+            {
+                <option value="@item.Value">@item.Text </option>
+            }
+        }
+    }
+</select>

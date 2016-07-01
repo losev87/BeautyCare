@@ -1,0 +1,18 @@
+﻿@model BodyRepairCalculator.Model.DataView.FileView
+
+@if (Model != null)
+{
+    if (Model.FileExist)
+    {
+        @Html.Image(Url.Action("Image", new { image = Model.PropertyName, id = Model.Id, guid = Guid.NewGuid() }), new { width = "500px" })
+        Dictionary<string, object> attributes = new Dictionary<string, object>();
+        attributes["readonly"] = "readonly";
+        attributes["name"] = "";
+        if (!string.IsNullOrWhiteSpace(Model.Url))
+        {
+            <br />
+            <input readonly="readonly" value="@Model.Url" />
+            @*@Html.TextBox("", Model.Url, attributes)*@
+        }
+    }
+}

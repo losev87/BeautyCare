@@ -1,0 +1,569 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8EEDD186-7922-4F1B-A5BE-C6EFE3DCF327}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IntraVision.Web.Mvc</RootNamespace>
+    <AssemblyName>IntraVision.Web.Mvc</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac">
+      <HintPath>..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Integration.Mvc, Version=3.3.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.Mvc5.3.3.4\lib\net45\Autofac.Integration.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Autofac.Integration.Owin">
+      <HintPath>..\packages\Autofac.Owin.3.1.0\lib\net45\Autofac.Integration.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Integration.WebApi, Version=3.4.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Autofac.WebApi2.3.4.0\lib\net45\Autofac.Integration.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper">
+      <HintPath>..\packages\AutoMapper.4.0.4\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="ClosedXML, Version=0.76.0.0, Culture=neutral, PublicKeyToken=fd1eb21b62ae805b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\ClosedXML.0.76.0\lib\net40-client\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.5.5631.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\packages\DocumentFormat.OpenXml.2.5\lib\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.0\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.Futures.5.0.0\lib\net40\Microsoft.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Text, Version=4.0.36.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\ServiceStack.Text.4.0.36\lib\net40\ServiceStack.Text.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.IdentityModel.Services" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Routing">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActionFilters\ResourceFilter.cs" />
+    <Compile Include="ActionResults\CAPTCHAImageResult.cs" />
+    <Compile Include="ActionResults\FileJsonResult.cs" />
+    <Compile Include="ActionResults\HttpNotFoundResult.cs" />
+    <Compile Include="ActionResults\SQLFileStreamResult.cs" />
+    <Compile Include="ActionResults\ImageResult.cs" />
+    <Compile Include="Attributes\BaseActionFilter.cs" />
+    <Compile Include="Attributes\CaptchaValidationAttribute.cs" />
+    <Compile Include="Attributes\BooleanAttribute.cs" />
+    <Compile Include="Attributes\ClaimsAttribute.cs" />
+    <Compile Include="Attributes\EqualValuesAttribute .cs" />
+    <Compile Include="Attributes\EqualAttribute .cs" />
+    <Compile Include="Attributes\FilterConditionsAttribute.cs" />
+    <Compile Include="Attributes\GridOptionsAttribute.cs" />
+    <Compile Include="Attributes\EditTabAttribute.cs" />
+    <Compile Include="Attributes\SelectedEntitiesAttribute.cs" />
+    <Compile Include="Attributes\FilterAttribute.cs" />
+    <Compile Include="Attributes\ImageAttribute.cs" />
+    <Compile Include="Attributes\GridColumnAttribute.cs" />
+    <Compile Include="Attributes\VINAttribute.cs" />
+    <Compile Include="Attributes\FileContentLengthAttribute.cs" />
+    <Compile Include="Attributes\EmailAttribute.cs" />
+    <Compile Include="Attributes\RequireHttpsAZAttribute.cs" />
+    <Compile Include="Attributes\VocabularyAttribute.cs" />
+    <Compile Include="Attributes\DateRangeAttribute.cs" />
+    <Compile Include="Attributes\FileExtensionsAttribute.cs" />
+    <Compile Include="Attributes\HttpPostedFileWrapperTypeAttribute.cs" />
+    <Compile Include="Attributes\FlashCompatibleAuthorizeAttribute.cs" />
+    <Compile Include="Attributes\LocalizedDisplayNameAttribute.cs" />
+    <Compile Include="Attributes\ModelStateTransfer.cs" />
+    <Compile Include="Attributes\ClaimsAuthorizeAttribute.cs" />
+    <Compile Include="Attributes\SessionModelBinderAttribute.cs" />
+    <Compile Include="Attributes\_AuthenticationTicketIdentityAttribute.cs" />
+    <Compile Include="Attributes\_AuthenticationTicketIdentity.cs" />
+    <Compile Include="Autofac\ContainerAutofacDependencyResolver.cs" />
+    <Compile Include="Autofac\GetInLifetimeScope.cs" />
+    <Compile Include="Autofac\Modules\ModuleRegisterGridModel.cs" />
+    <Compile Include="Autofac\Modules\ModuleRegisterBaseRepository.cs" />
+    <Compile Include="Autofac\Modules\ModuleRegisterRepository.cs" />
+    <Compile Include="Autofac\Modules\ModuleRegisterBaseServices.cs" />
+    <Compile Include="Autofac\Modules\ModuleRegisterContext.cs" />
+    <Compile Include="Autofac\Modules\ModuleRegisterApiController.cs" />
+    <Compile Include="Autofac\Modules\ModuleRegisterController.cs" />
+    <Compile Include="Controllers\AccountControllerBase.cs" />
+    <Compile Include="Controllers\ControllerBase.cs" />
+    <Compile Include="Controllers\CrudController%273.cs" />
+    <Compile Include="Controllers\DependentEntityCRUDController%275.cs" />
+    <Compile Include="Controllers\FiltrateCrudController%274.cs" />
+    <Compile Include="Controllers\FiltrateDictionaryController.cs" />
+    <Compile Include="Controllers\DictionaryController.cs" />
+    <Compile Include="Controllers\FiltrateCrudController%276.cs" />
+    <Compile Include="Controllers\CrudController%275.cs" />
+    <Compile Include="Controllers\IFilterableController.cs" />
+    <Compile Include="Controllers\SortableDictionaryController.cs" />
+    <Compile Include="Controllers\DictionaryControllerFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controllers\IDictionaryController.cs" />
+    <Compile Include="Controls\AutocompleteField.cs" />
+    <Compile Include="Controls\AutocompleteResult.cs" />
+    <Compile Include="Controls\CategorySelectListItem.cs" />
+    <Compile Include="Controls\Filter\FilterConditions\BoolFilterCondition.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\Filter\FilterConditions\SelectFilterFuncCondition.cs" />
+    <Compile Include="Controls\Filter\FilterConditions\SingleSelectFilterFuncCondition.cs" />
+    <Compile Include="Controls\Filter\FilterConditions\SingleSelectFilterCondition.cs" />
+    <Compile Include="Controls\Filter\FilterConditions\DateFilterCondition.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\Filter\Filter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\Filter\FilterConditions\FilterConditionBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\Filter\FilterConditionValue.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\Filter\FilterEdit.cs" />
+    <Compile Include="Controls\Filter\FilterExtensions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\Filter\IFilter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\Filter\IFilterCondition.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\Filter\FilterConditions\NumericFilterCondition.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\Filter\FilterConditions\SelectFilterCondition.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\Filter\FilterConditions\StringFilterCondition.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\Filter\SavedFilter.cs" />
+    <Compile Include="Controls\GridView\GridView.cs" />
+    <Compile Include="Controls\Grid\ActionGrid.cs" />
+    <Compile Include="Controls\Grid\ActionSyntax\ActionSyntaxExtensions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\Grid\AutoColumnGridModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\Grid\ColumnBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\Grid\IXlsxGridRenderer.cs" />
+    <Compile Include="Controls\Grid\XlsxGridRenderer.cs" />
+    <Compile Include="Controls\Grid\Grid.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\Grid\GridColumn.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\Grid\GridHtmlHelperExtensions.cs" />
+    <Compile Include="Controls\Grid\GridExtensions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\Grid\GridModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\Grid\GridOptions.cs" />
+    <Compile Include="Controls\Grid\GridOptionsModelBinder.cs" />
+    <Compile Include="Controls\Grid\GridViewModel.cs" />
+    <Compile Include="Controls\Grid\IGridOptions.cs" />
+    <Compile Include="Controls\Grid\IGridViewModel.cs" />
+    <Compile Include="Controls\Grid\GridRenderer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\Grid\GridRow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\Grid\GridRowViewData.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\Grid\GridSections.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\Grid\GridSortOptions.cs" />
+    <Compile Include="Controls\Grid\HtmlTableGridRenderer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\Grid\IActionGrid.cs" />
+    <Compile Include="Controls\Grid\IGridColumn.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\Grid\IGridModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\Grid\IGridRenderer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\Grid\RenderingContext.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\Grid\Syntax.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\Hash.cs" />
+    <Compile Include="Controls\HtmlHelper.cs" />
+    <Compile Include="Controls\Pager\Pager.cs" />
+    <Compile Include="Controls\Pager\PaginationExtensions.cs" />
+    <Compile Include="Entities\EntityBase.cs" />
+    <Compile Include="Entities\NamedEntityBase.cs" />
+    <Compile Include="ExtendedWebViewPage.cs" />
+    <Compile Include="Extensions\HttpPostedFileBaseExtensions.cs" />
+    <Compile Include="GenericControllerFactory.cs" />
+    <Compile Include="HtmlHelpers\EnumerableExtensions.cs" />
+    <Compile Include="HtmlHelpers\HtmlPrefixScopeExtensions.cs" />
+    <Compile Include="HtmlHelpers\HtmlHelperExtensions.cs" />
+    <Compile Include="HtmlHelpers\jQueryUIExtensions.cs" />
+    <Compile Include="HtmlHelpers\MenuHelper.cs" />
+    <Compile Include="ImageHelper\ImageHelper.cs" />
+    <Compile Include="InputExtensions.cs" />
+    <Compile Include="Localization\HtmlExtensions.cs" />
+    <Compile Include="MimeHelper\MimeHelper.cs" />
+    <Compile Include="ModelBinding\BindResult.cs" />
+    <Compile Include="ModelBinding\FileCollectionModelBinder.cs" />
+    <Compile Include="ModelBinding\SessionModelBinder.cs" />
+    <Compile Include="ModelBinding\IFilteredModelBinder.cs" />
+    <Compile Include="ModelBinding\SmartBinder.cs" />
+    <Compile Include="ModelMetadata\AutocompleteAttribute.cs" />
+    <Compile Include="ModelMetadata\DependentDropDownAttribute.cs" />
+    <Compile Include="ModelMetadata\IAdditionalValueAttribute.cs" />
+    <Compile Include="ModelMetadata\HeadTextAttribute.cs" />
+    <Compile Include="ModelMetadata\TokenInputAttribute.cs" />
+    <Compile Include="ModelMetadata\TargetPropertyAttribute.cs" />
+    <Compile Include="ModelMetadata\IntraVisionModelMetadataProvider.cs" />
+    <Compile Include="Modules\CustomServerHeaderModule.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RequestHelper\RequestHelper.cs" />
+    <Compile Include="Resources\FastPager.ru.Designer.cs">
+      <DependentUpon>FastPager.ru.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Filter.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Filter.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Filter.ru.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Filter.ru.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Grid.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Grid.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Grid.ru.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Grid.ru.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\FastPager.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FastPager.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Security.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Security.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Security.ru.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Security.ru.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Route\RouteConstraint.cs" />
+    <Compile Include="Route\GenericAreaRegistrationContextInitializer.cs" />
+    <Compile Include="Route\AreaRegistrationContextExtension.cs" />
+    <Compile Include="Route\GenericRoutesInitializer.cs" />
+    <Compile Include="Route\DomainData.cs" />
+    <Compile Include="Route\DomainRoute.cs" />
+    <Compile Include="Route\RouteCollectionExtension.cs" />
+    <Compile Include="Security\AuthenticationModule.cs" />
+    <Compile Include="Security\IMVCIdentity.cs" />
+    <Compile Include="Security\IMVCPrincipal.cs" />
+    <Compile Include="Security\FormsAuthenticationUserPersister.cs" />
+    <Compile Include="Security\ILogOnViewData.cs" />
+    <Compile Include="Security\IUser.cs" />
+    <Compile Include="Security\IUserPersister.cs" />
+    <Compile Include="Security\LogOnViewData.cs" />
+    <Compile Include="Security\LogOnViewDataModelBinder.cs" />
+    <Compile Include="Security\MVCIdentity.cs" />
+    <Compile Include="Security\MVCPrincipal.cs" />
+    <Compile Include="Security\UserModelBinder.cs" />
+    <Compile Include="Security\LogOnResult.cs" />
+    <Compile Include="Security\CodeViewData.cs" />
+    <Compile Include="Services\Abstract\IFilterableBaseService.cs" />
+    <Compile Include="Services\AspNetIdentity\CustomPasswordValidator.cs" />
+    <Compile Include="Services\RoleManagerBase.cs" />
+    <Compile Include="Services\AccountServiceBase.cs" />
+    <Compile Include="Services\Abstract\IDependentEntityService.cs" />
+    <Compile Include="Services\RoleStoreBase.cs" />
+    <Compile Include="Services\UserStoreBase.cs" />
+    <Compile Include="Services\BaseService.cs" />
+    <Compile Include="Services\FilterableBaseService.cs" />
+    <Compile Include="Services\Abstract\IBaseService.cs" />
+    <Compile Include="Services\Abstract\IDictionaryService.cs" />
+    <Compile Include="Services\Abstract\IFilterService.cs" />
+    <Compile Include="Services\Abstract\IMembershipUserService.cs" />
+    <Compile Include="Services\Abstract\IRolesService.cs" />
+    <Compile Include="Services\Abstract\ISortableDictionaryService.cs" />
+    <Compile Include="Services\MembershipUserService.cs" />
+    <Compile Include="StructureMapControllerFactory.cs" />
+    <Compile Include="UrlHelpers\UrlExtensions.cs" />
+    <Compile Include="Validation\AutocompleteRequiredAttribute.cs" />
+    <Compile Include="Validation\CommandResult.cs" />
+    <Compile Include="Validation\ValidationRegex.cs" />
+    <Compile Include="ViewModels\EditWithTab.cs" />
+    <Compile Include="ViewModels\FilterBase.cs" />
+    <Compile Include="ViewModels\DateInput.cs" />
+    <Compile Include="ViewModels\FormViewModelBase.cs" />
+    <Compile Include="ViewModels\GridModelBase.cs" />
+    <Compile Include="ViewModels\GridOptionsBase.cs" />
+    <Compile Include="ViewModels\IFormViewModel.cs" />
+    <Compile Include="ViewModels\IListViewModel.cs" />
+    <Compile Include="ViewModels\ListViewModel.cs" />
+    <Compile Include="ViewModels\ListViewModelBase.cs" />
+    <Compile Include="View\FakeView.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\FastPager.ru.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>FastPager.ru.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Filter.ru.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Filter.ru.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Filter.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Filter.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Grid.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Grid.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Grid.ru.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Grid.ru.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\FastPager.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>FastPager.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Security.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Security.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Security.ru.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Security.ru.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IntraVision.Core\IntraVision.Core.csproj">
+      <Project>{ae8cbba5-a6da-4741-9f86-ab33b0dcb564}</Project>
+      <Name>IntraVision.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

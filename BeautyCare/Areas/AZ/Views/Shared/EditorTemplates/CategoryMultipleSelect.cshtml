@@ -1,0 +1,21 @@
+﻿@model IEnumerable<CategorySelectListItem>
+
+@{ var attribute = GetTargetPropertyAttribute();}
+<select name="@attribute.TargetProperty" multiple="multiple">
+@if (Model != null && Model.Count() > 0)
+    {
+        string curCategory = string.Empty;
+        foreach (var s in Model)
+        {
+            if (curCategory != s.Category)
+            {
+                if (!string.IsNullOrEmpty(curCategory)) Response.Write("</optgroup>");
+                curCategory = s.Category;
+                Response.Write(string.Format("<optgroup label=\"{0}\">", curCategory));
+            }
+            Response.Write(string.Format("<option value=\"{0}\" {2}>{1}</option>", s.Value, s.Text, s.Selected ? " selected=\"selected\"" : ""));
+        }
+        Response.Write("</optgroup>");
+    }
+
+</select>

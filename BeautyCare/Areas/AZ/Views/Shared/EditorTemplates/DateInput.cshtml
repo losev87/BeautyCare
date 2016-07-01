@@ -1,0 +1,6 @@
+﻿@model DateInput
+@{
+    string cls = ViewData.ModelMetadata.IsRequired ? "required" : ""; 
+}
+@Html.TextBox("Date", ViewData.Model.Date, new { @class = "dateRU " + cls })
+@Html.TextBox("Time", ViewData.Model.Time, new { @class = "time " + cls })

@@ -1,0 +1,33 @@
+﻿@model LogOnViewData
+
+@{
+    ViewBag.Title = "BeautyCare. Вход в административный раздел";
+    Layout = "~/Areas/AZ/Views/Shared/_Empty.cshtml";
+}
+
+<div class="paper-shadow" id="login">
+    <div class="paper">
+        @Html.ValidationSummary(true, "Не удалось войти в систему.")
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            <h2>
+                Личный кабинет</h2>
+            <fieldset>
+                <div class="row">
+                    @Html.LabelFor(m => m.Login)
+                    @Html.TextBoxFor(m => m.Login)
+                    @Html.ValidationMessageFor(m => m.Login)
+                </div>
+                <div class="row">
+                    @Html.LabelFor(m => m.Password)
+                    @Html.PasswordFor(m => m.Password)
+                    @Html.ValidationMessageFor(m => m.Password)
+                </div>
+            </fieldset>
+            <div class="form-bottom btn-right">
+                <input type="submit" value="Войти" class="button" />
+            </div>
+        }
+    </div>
+</div>

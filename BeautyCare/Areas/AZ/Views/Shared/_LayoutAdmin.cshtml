@@ -1,0 +1,50 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="shortcut icon" type="image/x-icon" href="@Url.Content("~/Content/Images/favicon.ico")"/>
+    <title>BeautyCare - Административная зона</title>
+    @*
+    @Scripts.Render("~/Scripts/AZ/bootstrap-datetimepicker/moment-with-locales.js")
+    @Scripts.Render("~/Scripts/AZ/bootstrap-datetimepicker/bootstrap-datetimepicker.js")
+    @Scripts.Render("~/Scripts/AZ/bootstrap-multiselect-master/bootstrap-multiselect.js")
+    *@    
+    
+    @Styles.Render("~/Areas/AZ/Styles/jqueryui/css")
+    @Styles.Render("~/Areas/AZ/Styles/bootstrap/css/css")
+    @Styles.Render("~/Areas/AZ/Styles/css")
+
+    @Scripts.Render("~/Areas/AZ/Scripts/jquery")
+    @Scripts.Render("~/Areas/AZ/Scripts/jqueryui")
+    @Scripts.Render("~/Areas/AZ/Scripts/jqueryval")
+    @Scripts.Render("~/Areas/AZ/Scripts/bootstrap")
+    @Scripts.Render("~/Areas/AZ/Scripts/az")
+
+    @RenderSection("CustomScripts", false)
+    @RenderSection("CustomCss", false)
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <img class="logo" src="~/Areas/AZ/Content/logo-desktop.png" />
+            <h1>  
+                BeautyCare - Административная зона
+            </h1>
+            <div class="clear"></div>
+            <div id="menu">
+                @Html.MvcSiteMap().Menu()
+            </div>
+            <div id="user-data">
+               @{Html.RenderPartial("_UserInfoPartial");}
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div id="body">
+            <div id="contentright">
+                <div id="contentbody">
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

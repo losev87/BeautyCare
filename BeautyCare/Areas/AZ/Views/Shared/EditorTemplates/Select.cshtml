@@ -1,0 +1,9 @@
+﻿@model object
+@{
+var name = ViewData.ModelMetadata.PropertyName;
+var options = (ViewData.ContainsKey(name+"Options")? ViewData[name+"Options"] : ViewData["Options"]) as IEnumerable;
+if(options != null)
+{
+    Response.Write(Html.DropDownList("", new SelectList(options, "Id", "Name", Model)).ToString());
+}}
+

@@ -1,0 +1,246 @@
+﻿dl.form { min-width: 680px; clear: both; }
+/*dl.form dt { float: left; width: 250px; text-align: right; margin: 4px 10px 0 0; position: absolute; }
+dl.form dd { width: 400px; padding: 2px 0; position: relative; left: 260px; /*margin-right: 220px; overflow: visible; margin-bottom: 3px; }*/
+dl.form dt { float: left; width: 300px; height: 17px; text-align: right; margin-right: 10px; position: absolute; padding-top: 7px; }
+dl.form dd {font-size: 14px; width: 400px; position: relative; left: 310px; /*margin-right: 220px;*/ overflow: visible; padding-top: 7px; margin: 0 0 10px 0; }
+dl.form.constructor dd { width: 600px; }
+
+input[type=text], input[type=password], textarea, select
+{ 
+    margin: 0; 
+    font-size:12px; 
+    border-radius: 3px;
+    height: 30px;
+    line-height: 1.5;
+    padding: 5px 10px;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    color: #555;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+
+}
+
+input[type=text]:focus, input[type=password]:focus, textarea:focus, select:focus {
+    border-color: #66afe9;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 175, 233, 0.6);
+    outline: 0 none;
+}
+/*.filter input[type=text], .filter input[type=password], .filter textarea, .filter select
+{ 
+    margin: 0; 
+    font-size:12px; 
+    border-radius: 3px;
+    height: 30px;
+    line-height: 1.5;
+    padding: 5px 10px;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    color: #555;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+
+}
+
+.filter input[type=text]:focus, .filter input[type=password]:focus, .filter textarea:focus, .filter select:focus {
+    border-color: #66afe9;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 175, 233, 0.6);
+    outline: 0 none;
+}*/
+dl.form input[type=text],dl.form input[type=password],dl.form textarea,dl.form select 
+{ 
+    width: 400px; 
+    margin: 0; 
+    font-size:12px; 
+    border-radius: 3px;
+    height: 30px;
+    line-height: 1.5;
+    padding: 5px 10px;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    color: #555;
+    display: block;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+
+}
+
+dl.form input[type=text]:focus,dl.form input[type=password]:focus,dl.form textarea:focus,dl.form select:focus {
+    border-color: #66afe9;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 175, 233, 0.6);
+    outline: 0 none;
+}
+
+dl.form.mail input[type=text],dl.form.mail input[type=password],dl.form.mail textarea,dl.form.mail select { width: 700px; }
+dl.form.constructor input[type=text],dl.form.constructor input[type=password],dl.form.constructor textarea,dl.form.constructor select { width: 200px; }
+dl.form .description { margin: 5px 0 6px 2px; width: 400px; line-height: 15px; color:#aaa; font-size:11px; }
+span.error, label.error, span.field-validation-error, .validation-summary-errors { color: #F30; font-size: 11px; }
+label.valid { color: green; font-size: 9pt; }
+dl.form.mini { min-width: 150px !important; }
+dl.form.mini dt { width: 100px !important; }
+dl.form.mini dd { margin: 0 0 5px 110px !important; left: 0px !important; }
+
+table.ft { width: 600px; margin: 0 5px 10px 5px; }
+table.ft td { vertical-align: top; }
+table.ft td.fl { text-align: right; vertical-align: top; padding: 7px 0; width: 200px;}
+table.ft td.fl label { margin: 0 10px 0 0; }
+table.ft td.ff { text-align: left; width: 410px; }
+table.ft td.fh { border-bottom: 1px solid #f2f6fb; }
+table.ft td.fd { padding-bottom: 1em; color: #656565; font-size: 8pt; line-height: 10pt;}
+table.ft td.fs { height: 10px; overflow: hidden; }
+
+span.field-validation-error, label.error { font-size: 9pt; color: Red; display: block; margin-bottom: 3px; }
+#container div#body div#contentright div#contentbody .form-jquery-tabs input.datetimeRU {font-size:14px; width:150px;}
+
+input[type=text],textarea,select { font-size: 14px; font-family: Verdana,Arial,sans-serif; }
+input[type=text],input[type=password],textarea,select { padding: 3px 2px; border:solid 1px #cceff4; border-left: 1px solid #aacfe4; border-top: 1px solid #aacfe4;margin: 2px 0 5px 0;}
+.ff input[type=text],.ff input[type=password],.ff textarea{ width: 400px; }
+select{ padding: 1px; }
+.ff select { width: 400px; }
+input[type=checkbox], input[type=radio] { vertical-align: middle; position: relative; bottom: 1px; }
+input[type=radio] { bottom: 2px; }
+input.dateRU, dl.form input.dateRU { width: 110px; }
+input.datetimeRU, dl.form input.datetimeRU 
+    { 
+        width: 47%; 
+        font-size:12px;
+        border-radius: 3px;
+        height: 30px;
+        line-height: 1.5;
+        padding: 5px 10px;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #ccc;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+        color: #555;
+        transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+
+}
+
+input.datetimeRU:focus, dl.form input.datetimeRU:focus {
+    border-color: #66afe9;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 175, 233, 0.6);
+    outline: 0 none;
+}
+
+/*dl.form input[type=text],dl.form input[type=password],dl.form textarea,dl.form select 
+{ 
+    width: 400px; 
+    margin: 0; 
+    font-size:12px; 
+    border-radius: 3px;
+    height: 30px;
+    line-height: 1.5;
+    padding: 5px 10px;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    color: #555;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+
+}
+
+dl.form input[type=text]:focus,dl.form input[type=password]:focus,dl.form textarea:focus,dl.form select:focus {
+    border-color: #66afe9;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 175, 233, 0.6);
+    outline: 0 none;
+}*/
+
+input.number, input.digits, .ff input.number, .ff input.digits{width: 5em; }
+.ff input.color { width: 5em;}
+input.required { border:solid 1px #f4dccf; border-left: 1px solid #e4baaa; border-top: 1px solid #e4baaa; }
+input.required.valid{border:solid 1px #cceff4; border-left: 1px solid #aacfe4; border-top: 1px solid #aacfe4;}
+textarea.required { border:solid 1px #f4dccf; border-left: 1px solid #e4baaa; border-top: 1px solid #e4baaa; }
+textarea.required.valid{border:solid 1px #cceff4; border-left: 1px solid #aacfe4; border-top: 1px solid #aacfe4;}
+select.required { border:solid 1px #f4dccf; border-left: 1px solid #e4baaa; border-top: 1px solid #e4baaa; }
+select.required.valid{border:solid 1px #cceff4; border-left: 1px solid #aacfe4; border-top: 1px solid #aacfe4;}
+
+div#colorpicker { position: absolute; background: #fff; display: none; }
+div.stringlist input { width: 365px !important;}
+div.stringlist li img { vertical-align: top; margin: 5px; }
+
+.tabs { border-bottom: 1px solid #d2d6da; margin: 5px 0; }
+.tabs ul { clear: both; float: left; position: relative; }
+.tabs ul li { float: left; padding: 0; margin-right: 7px; border: 1px solid #d2d6da; position: relative; top: 1px; background: #ecedee; }
+.tabs ul li a { display: block; padding: 5px 8px; }
+.tabs ul li.selected { background: #fff; border-bottom: 1px solid #fff; }
+div#tabsPane { }
+div#tabsPane > div { margin: 10px 0; }
+
+.form-bottom { padding: 10px 10px 20px 20px; border-top: 1px solid #e2e4e6; margin-top: 10px; }
+ul.checklist { margin: 5px 0;}
+div table.edit { border: 2px solid #b7ddf2; }
+.contenthead {margin: 5px 0 5px 0}
+div.form-body-message {
+    margin: 12px 0 20px 12px;
+}
+
+div.form-bottom dl.form{min-width:0px;}
+
+.dealers-test-drive dl.form {
+    width: 680px;
+    margin: 20px 0 0 10px;
+}
+
+.dealers-test-drive dl.form dt {
+    text-align: left;
+}
+
+.dealers-test-drive dl.form dd {
+    margin: 0 0 18px;
+}
+
+.dealers-test-drive dl.form input[type="text"], .dealers-test-drive dl.form input[type="password"], .dealers-test-drive dl.form textarea, .dealers-test-drive dl.form select {
+    background-color: #efeff1;
+    box-shadow: none;
+    font-size: 16px;
+    padding: 2px 10px;
+    border-radius: 0;
+}
+
+.dealers-test-drive dl.form input.datetimeRU {
+    background-color: #efeff1;
+}
+
+.dealers-test-drive dl.form label {
+    font-size: 16px;
+    font-family: Arial;
+    color: #515151;
+    font-weight: normal;
+}
+
+
+.dealers-test-drive dl.form p.headText {
+    color: #515151;
+    font-weight: bold;
+    font-size: 18px;
+    left: -310px;
+    margin: 30px 0 20px;
+    position: relative;
+
+}
+
+input[type="submit"].dealers-submit {
+        height: 46px;
+        line-height: 46px;
+        font-size: 20px !important;
+        color: #fff;
+        padding: 0 30px;
+background: -moz-linear-gradient(top, #7d8083 0%, #2f3339 100%);
+    background: -webkit-linear-gradient(top, #7d8083 0%,#2f3339 100%);
+    background: -o-linear-gradient(top, #7d8083 0%,#2f3339 100%);
+    background: -ms-linear-gradient(top, #7d8083 0%,#2f3339 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d8083', endColorstr='#2f3339',GradientType=0 );
+    background: linear-gradient(top, #7d8083 0%,#2f3339 100%);
+    cursor: pointer;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+}
+
+.dealersTDWrapper {
+    margin-left: 40px;
+}

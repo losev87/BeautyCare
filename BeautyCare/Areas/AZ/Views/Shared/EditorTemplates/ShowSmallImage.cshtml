@@ -1,0 +1,9 @@
+﻿@model Int32?
+
+@if (Model != null)
+{
+    <a href="@Url.Action("ShowBigImage", new { id = Model })" target="_blank">
+        @Html.Image(Url.Action("ShowSmallImage", new { id = Model }))
+    </a>
+}
+

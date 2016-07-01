@@ -1,0 +1,13 @@
+﻿@model SelectListItem
+
+<div id="selectCarName">
+    @if (Model != null)
+    {
+        @Model.Text;
+    }
+</div>
+@Html.ActionLink("Выбрать", "SelectedCar", new { }, new { id = "linkSelectedCar" })
+@if (Model != null)
+{
+    <a href="#" id="deleteSelectedCar">Удалить</a>
+}

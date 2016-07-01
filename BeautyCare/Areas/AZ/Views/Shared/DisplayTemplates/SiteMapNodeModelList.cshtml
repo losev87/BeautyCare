@@ -1,0 +1,24 @@
+﻿@model SiteMapNodeModelList
+
+@{
+    var children = new SiteMapNodeModelList();
+    var currentController = ViewContext.RouteData.Values["controller"].ToString();
+}
+<ul class="second-lvl-menu clearfix">
+    @foreach (var node in Model)
+    {
+        <li @(node.IsCurrentNode || node.IsInCurrentPath || currentController == node.Controller ? "class=selected" : "")>
+            @Html.DisplayFor(m => node)
+
+        </li>
+        if (node.Children.Any() && node.IsInCurrentPath)
+        {
+            children = node.Children;
+        }
+    }
+</ul>
+<div class="clear"></div>
+@if (children.Count > 0)
+{
+    @Html.DisplayFor(m => children)
+}

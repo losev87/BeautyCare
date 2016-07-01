@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<mvcSiteMap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns="http://mvcsitemap.codeplex.com/schemas/MvcSiteMap-File-4.0"
+            xsi:schemaLocation="http://mvcsitemap.codeplex.com/schemas/MvcSiteMap-File-4.0 MvcSiteMapSchema.xsd">
+
+  <mvcSiteMapNode clickable="false" title=" ">
+    <mvcSiteMapNode title="Заявки" area="AZ" controller="Order" action="Index" roles="Administrator" />
+    <mvcSiteMapNode title="Классы" area="AZ" controller="MbClass" action="Index" roles="Administrator" />
+    <mvcSiteMapNode title="Детали" area="AZ" controller="Detail" action="Index" roles="Administrator" />
+    <mvcSiteMapNode title="Пользователи" area="AZ" controller="User" action="Index" roles="Administrator" />
+  </mvcSiteMapNode>
+</mvcSiteMap>

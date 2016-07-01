@@ -1,0 +1,36 @@
+﻿@model SelectFilterCondition
+@{int index = (int)ViewData["index"];
+  string condition = Model.Value != null ? Model.Value.Condition : "IsIn";
+  var inputName0 = Model.GetInputName(index, "Values");
+ }
+<dt>
+<a href="#" class="showFilterCondition" filterIndex="#filterIndex_@(index)">@Model.Caption <span>&#9660;</span></a>
+<input type="hidden" name="@Model.GetInputName(index, "Condition")" value="@condition" />
+<input type="hidden" name="@Model.GetInputName(index, "Column")" value="@Model.Column" />
+</dt>
+<dd>
+<div class="msdd">
+<div class="selectFilterCondition" id="filterIndex_@(index)">
+    <input id="applyFilterCondition" type="hidden" value="@String.Join("|", Model.Dictionary.Where(i => Model.Value != null && Model.Value.Values != null && Model.Value.Values.Contains(i.Value.ToString())).Select(i => i.Value))" />
+    @foreach (var item in Model.Dictionary)
+    {
+        <p title="@(item.Text.Length > 45 ? item.Text : null)">
+            @if (Model.Value != null && Model.Value.Values != null && Model.Value.Values.Contains(item.Value.ToString()))
+            {
+                <input name="@inputName0" type="checkbox" value="@item.Value" checked="checked"/>@item.Text
+            }
+            else {
+                <input name="@inputName0" type="checkbox" value="@item.Value"/>@item.Text
+            }
+        </p>
+    }
+    <a href="#" class="closeFilterCondition" filterIndex="#filterIndex_@(index)">закрыть</a>
+</div>
+<div class="applyItems">
+    @foreach (var item in Model.Dictionary.Where(i => Model.Value != null && Model.Value.Values != null && Model.Value.Values.Contains(i.Value.ToString())))
+    {
+        <p class="applyItem">@item.Text<a href="#" class="deleteApplyItem" itemValue="@item.Value" title="убрать">x</a></p>
+    }
+</div>
+</div>
+</dd>

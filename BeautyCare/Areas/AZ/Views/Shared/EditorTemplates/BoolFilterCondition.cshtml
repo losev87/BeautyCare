@@ -1,0 +1,17 @@
+﻿@model BoolFilterCondition
+
+@{
+  var index = (int)ViewData["index"];
+}
+
+<dt>
+    <label>@Model.Caption</label>
+    <input type="hidden" name="@Model.GetInputName(index, "Column")" value="@Model.Column" />
+</dt>
+<dd>
+    <select name="@Model.GetInputName(index, "Condition")" style="width:107px" >
+        <option value="None" >@Model.NoneText</option>
+        <option value="True" @(Model.Value != null ? (Model.Value.Condition == "True" ? "selected=selected" : null) : null ) >@Model.TrueText</option>
+        <option value="False" @(Model.Value != null ? (Model.Value.Condition == "False" ? "selected=selected" : null) : null ) >@Model.FalseText</option>
+    </select>
+</dd>

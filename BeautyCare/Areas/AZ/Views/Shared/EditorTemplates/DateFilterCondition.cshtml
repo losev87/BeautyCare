@@ -1,0 +1,16 @@
+﻿@model DateFilterCondition
+@{int index = (int)ViewData["index"];
+  string condition = Model.Value != null ? Model.Value.Condition : "Between";
+  var inputName0 = Model.GetInputName(index, "Values[0]");
+  var inputName1 = Model.GetInputName(index, "Values[1]");
+  var value0 = Model.Value != null ? Model.Value.Values[0] : "";
+  var value1 = Model.Value != null ? Model.Value.Values[1] : ""; }
+<dt>
+<label>@Model.Caption</label>
+<input type="hidden" name="@Model.GetInputName(index, "Condition")" value="@condition" />
+<input type="hidden" name="@Model.GetInputName(index, "Column")" value="@Model.Column" />
+</dt>
+<dd>
+<input type="text" name="@inputName0" value="@value0" class="datetimeRU date-input-right" /> -
+<input type="text" name="@inputName1" value="@value1" class="datetimeRU date-input-right" />
+</dd>

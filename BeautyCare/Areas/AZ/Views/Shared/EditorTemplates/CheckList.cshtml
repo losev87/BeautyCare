@@ -1,0 +1,13 @@
+﻿@model IList<long>
+@{var name = ViewData.ModelMetadata.PropertyName; }
+<ul class="checklist" id="@name ">
+@{var options = ViewData["Options"] as IEnumerable<SelectListItem>;
+if(options != null && options.Count() > 0)
+{
+    foreach (var option in options)
+    {
+        Response.Write(string.Format("<li><label><input type=\"checkbox\" name=\"{0}\" value=\"{1}\" {3}>{2}</label></li>", name, option.Value, option.Text,
+                                     option.Selected ? "checked=\"checked\"" : ""));
+    }
+}}
+</ul>

@@ -1,0 +1,14 @@
+﻿@model EditWithTab
+@{
+    ViewBag.Title = Model.Name;
+    Layout = "~/Areas/AZ/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div id="editTabs" class="form-jquery-tabs">
+    <ul>
+        @foreach (var tab in Model.Tabs)
+        {
+            <li><a href="@tab.Value">@tab.Text</a></li>
+        }
+    </ul>
+</div>

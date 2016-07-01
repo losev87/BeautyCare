@@ -1,0 +1,26 @@
+﻿<div title="@Model.ToString()">
+    <input type="text" style="display:none;" id="modelStateCount" value="@this.ViewData.ModelState.Values.Select(v=>v.Errors.Count).Sum()" name="modelStateCount" />
+    <div class="contenthead">
+        <h2>@Model.ToString() </h2>
+    </div>
+    @Html.ValidationSummary(false)
+    @if (ViewData.ModelState["Global"] != null)
+    {
+        foreach (var error in ViewData.ModelState["Global"].Errors)
+        {
+            @Html.ValidationSummary(error.ErrorMessage);
+        }
+    }
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <div class="validationsummary hidden"></div>
+        <div class="form-body">
+            @Html.EditorForModel()
+        </div>
+        <div class="form-bottom btn-right">
+            <a href="#" class="button">Закрыть</a>
+            <input type="submit" value="Сохранить" class="button" />
+        </div>
+    }
+</div>

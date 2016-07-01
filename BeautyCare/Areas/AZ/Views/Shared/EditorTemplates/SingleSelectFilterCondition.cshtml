@@ -1,0 +1,39 @@
+﻿@model SingleSelectFilterCondition
+
+@{int index = (int)ViewData["index"];
+  string condition = "Equal";
+  var inputName0 = Model.GetInputName(index, "Values");
+  var inputId = Model.GetInputId(index, "Values");
+  var selectedValue = Model.GetInputId(index, "SelectedValue");
+  }
+<dt>
+<label>@Model.Caption</label>
+<input type="hidden" name="@Model.GetInputName(index, "Condition")" value="@condition" />
+<input type="hidden" name="@Model.GetInputName(index, "Column")" value="@Model.Column" />
+</dt>
+<dd>
+<div class="msdd">
+<input id="@selectedValue" type="hidden" value="@(Model.Value != null && Model.Value.Values != null && Model.Value.Values.Count()>0) ? Model.Value.Values[0] : " "" />
+<select name="@inputName0" id="@inputId">
+@if (Model.Value == null || Model.Value.Values == null)
+{
+    <option value="" selected="selected"></option>
+}
+else
+{
+    <option value=""></option>    
+}
+@foreach (var item in Model.Dictionary)
+{
+    if (Model.Value != null && Model.Value.Values != null && Model.Value.Values[0] == item.Value)
+    {
+        <option value="@item.Value" selected="selected">@item.Text</option>
+    }
+    else
+    {
+        <option value="@item.Value">@item.Text</option>
+    }
+}
+</select>
+</div>
+</dd>

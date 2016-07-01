@@ -1,0 +1,45 @@
+﻿@model SearchOptions
+
+<div class="ms-component ms-distance-l">
+							<h1 class="ms-hl3">
+								Поиск</h1>
+						</div>
+						<div class="ms-component ms-distance-l">
+						<table class="search">
+							<tr>
+								<td width="115">@Html.LabelFor(m=>m.ModelDictionary)</td>
+								<td>
+								    @Html.EditorFor(m=>m.ModelDictionary)
+                                </td>
+							</tr>
+							<tr>
+								<td>@Html.LabelFor(m=>m.ColorBodyDictionary)</td>
+								<td>
+								    @Html.EditorFor(m=>m.ColorBodyDictionary)
+								</td>
+							</tr>
+							<tr>
+								<td>@Html.LabelFor(m=>m.SalonFurnishDictionary)</td>
+								<td>
+								    @Html.EditorFor(m=>m.SalonFurnishDictionary)
+								</td>
+							</tr>
+							<tr>
+								<td>@Html.LabelFor(m=>m.LineDictionary)</td>
+								<td>
+								    @Html.EditorFor(m=>m.LineDictionary)
+								</td>
+							</tr>
+						</table>
+						<table style="margin-bottom:10px;" class="search">
+							<tr>
+								<td width="115">Цена от</td>
+								<td width="140"><input id="CastMin" class="text" type="text" name="CastMin" /></td>
+								<td align="right" width="75">до&#160;&#160;&#160;</td>
+								<td><input id="CastMax" class="text" type="text" name="CastMax" /></td>
+							</tr>
+						</table>
+						<p style="margin-bottom:15px;">Автомобиль участвует в акции <input id="ParticipateInAction" value="true" type="checkbox" name="ParticipateInAction" /><input type="hidden" value="false" name="ParticipateInAction" /></p>
+						<input id="SearchButton" onmouseover="this.src='Content/Images/find-on.jpg'" onmouseout="this.src='Content/Images/find-off.jpg'" src="Content/Images/find-off.jpg" type="image" />
+						<p style="display:none;" class="modelidclassidnull">Заполните Класс или Линию</p>
+                        </div>

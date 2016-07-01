@@ -1,0 +1,3 @@
+﻿@model System.Int32?
+@{ string cls = ViewData.ModelMetadata.IsRequired ? ("required" + (ViewData.ModelMetadata.Model != null && (int)ViewData.ModelMetadata.Model > 0 ? " valid" : "")) : "";}
+@Html.TextBox("", (Model.HasValue) ? ViewData.TemplateInfo.FormattedModelValue : "", new { @class = "digits " + cls, maxlength = "10" }) 

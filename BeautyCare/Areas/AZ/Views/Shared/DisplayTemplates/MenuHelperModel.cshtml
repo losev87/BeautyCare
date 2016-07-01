@@ -1,0 +1,24 @@
+﻿@model MvcSiteMapProvider.Web.Html.Models.MenuHelperModel
+@using System.Web.Mvc.Html
+@using MvcSiteMapProvider.Web.Html.Models
+
+@{
+    SiteMapNodeModelList children = null;
+    var currentController = ViewContext.RouteData.Values["controller"].ToString();
+}
+<ul>
+    @foreach (var node in Model.Nodes) { 
+        <li @(node.IsCurrentNode || node.IsInCurrentPath || node.Controller == currentController ? "class=selected" : "")>
+            @Html.DisplayFor(m => node) 
+        </li>
+        if (node.Children.Any() && (node.IsInCurrentPath || node.Children.Any(n => currentController == n.Controller)))
+        {
+            children = node.Children;
+        }
+    }
+</ul>
+<div class="clear"></div>
+@if (children != null && children.Count > 0)
+{
+    @Html.DisplayFor(m => children)
+}

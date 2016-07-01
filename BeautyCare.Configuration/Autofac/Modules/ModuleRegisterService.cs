@@ -1,0 +1,33 @@
+﻿using System.Linq;
+using System.Web;
+using Autofac;
+using BeautyCare.ContextManagement;
+using BeautyCare.Model.Management;
+using BeautyCare.Service;
+using IntraVision.Core;
+using IntraVision.Data;
+using IntraVision.Web.Mvc.Services;
+using Microsoft.Owin.Security;
+
+namespace BeautyCare.Configuration.Autofac.Modules
+{
+    public class ModuleRegisterServices<TServiceImplementationInterface> : Module
+    {
+        protected override void Load(ContainerBuilder builder)
+        {
+            builder.RegisterType<UserStoreBase<ManagementContext, User, Role, IdentityUserLoginBase, UserRole, IdentityUserClaimBase>>().AsImplementedInterfaces().InstancePerRequest();
+            builder.RegisterType<RoleStoreBase<ManagementContext, User, Role, IdentityUserLoginBase, UserRole, IdentityUserClaimBase>>().AsImplementedInterfaces().InstancePerRequest();
+
+            builder.Register(componentContext => HttpContext.Current.GetOwinContext().Authentication).As<IAuthenticationManager>().InstancePerRequest();
+            builder.RegisterType<UserManager>().AsSelf().InstancePerRequest();
+            builder.RegisterType<RoleManagerBase<User, Role, IdentityUserLoginBase, UserRole, IdentityUserClaimBase>>().AsSelf().InstancePerRequest();
+
+            builder.RegisterType<UserService>().AsImplementedInterfaces();
+
+            typeof(TServiceImplementationInterface).Assembly.GetTypes()
+                .Where(t => typeof(TServiceImplementationInterface).IsAssignableFrom(t))
+                .ForEach(t => builder.RegisterType(t).AsImplementedInterfaces());
+
+        }
+    }
+}

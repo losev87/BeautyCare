@@ -1,0 +1,9 @@
+﻿@model IList<string>
+<div class="stringlist">
+<ul>
+@{foreach(var str in Model){ 
+    <li>@Html.TextBox("", str) @Html.Image("~/Images/tag-remove.png") </li>
+} }
+<li>@Html.TextBox("","") @Html.Image("~/Images/tag-add.png") </li>
+</ul>
+</div>

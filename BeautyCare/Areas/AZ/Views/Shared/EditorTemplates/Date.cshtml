@@ -1,0 +1,5 @@
+﻿@{
+    string ModelValue = (ViewData.Model != null)?((((DateTime)ViewData.Model) == DateTime.MinValue)) ? "" : ((DateTime)ViewData.Model).ToShortDateString():"";
+    string cls = ViewData.ModelMetadata.IsRequired ? "required" : ""; 
+}
+@Html.TextBox("", ModelValue, new { @class = "dateRU " + cls }) 

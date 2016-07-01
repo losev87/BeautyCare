@@ -1,0 +1,2 @@
+﻿@model IEnumerable<SelectListItem>
+@(Model!=null&&Model.Any(i=>i.Selected)?Model.FirstOrDefault(i=>i.Selected).Text:"-")

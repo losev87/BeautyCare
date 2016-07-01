@@ -1,0 +1,17 @@
+﻿@model IEnumerable<SelectListItem>
+
+
+@{ TargetPropertyAttribute attribute = GetTargetPropertyAttribute();}
+<ul class="radio-list" id="@attribute.TargetProperty">
+@if (Model != null) { 
+    @foreach(SelectListItem item in Model) 
+        {
+        @if (item.Selected == true) {
+            <li><label><input type="radio" value="@item.Value " name="@attribute.TargetProperty" checked="checked" />@item.Text </label></li>
+         } 
+        @else {
+            <li><label><input type="radio" value="@item.Value " name="@attribute.TargetProperty" />@item.Text </label></li>
+         } 
+     } 
+ } 
+</ul>

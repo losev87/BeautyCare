@@ -1,0 +1,27 @@
+﻿@model IEnumerable<AdvancedSelectListItem>
+
+@{
+    var targetProperty = this.ViewData.ModelMetadata.PropertyName;
+    var targetPropertyAttribute = this.ViewData.ModelMetadata.ContainerType.GetProperty(this.ViewData.ModelMetadata.PropertyName).GetCustomAttributes(typeof(TargetPropertyAttribute), true);
+    if (targetPropertyAttribute.Any())
+    {
+        targetProperty = ((TargetPropertyAttribute)targetPropertyAttribute.First()).TargetProperty;
+    }
+}
+
+<select id="@targetProperty" name="@targetProperty">
+    @if (Model != null)
+    {
+        foreach (var item in Model)
+        {
+            if (item.Selected)
+            {
+                <option value="@item.Value" @(item.HtmlAttributes != null ? item.HtmlAttributes.ToHtmlAttributeString() : null) selected="selected">@item.Text</option>
+            }
+            else
+            {
+                <option value="@item.Value" @(item.HtmlAttributes != null ? item.HtmlAttributes.ToHtmlAttributeString() : null) >@item.Text</option>
+            }
+        }
+    }
+</select>

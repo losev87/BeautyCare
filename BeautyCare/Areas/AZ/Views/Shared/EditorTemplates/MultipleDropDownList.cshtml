@@ -1,0 +1,15 @@
+﻿@model IEnumerable<SelectListItem>
+
+
+@{ TargetPropertyAttribute attribute = GetTargetPropertyAttribute();}
+<select id="@attribute.TargetProperty" name="@attribute.TargetProperty" multiple="multiple">
+    @{ foreach(SelectListItem item in ViewData.Model) 
+       {
+        @if (item.Selected == true) {
+            <option value="@item.Value " selected="selected">@item.Text </option>
+         } 
+        @else {
+            <option value="@item.Value ">@item.Text </option>
+         } 
+     } }
+</select>

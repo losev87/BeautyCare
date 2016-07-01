@@ -1,0 +1,63 @@
+﻿@{var controllerContext = new ControllerContext(ViewContext.RequestContext, ViewContext.Controller);}
+@if (ViewData.TemplateInfo.TemplateDepth > 1)
+{
+	@ViewData.ModelMetadata.SimpleDisplayText
+}
+else
+{ 
+    <dl class="form">
+    @foreach (var prop in ViewData.ModelMetadata.Properties.Where(pm => pm.ShowForEdit && !ViewData.TemplateInfo.Visited(pm)))
+    {
+        if (prop.HideSurroundingHtml)
+        {
+            @Html.Display(prop.PropertyName)
+        }
+        else
+        {
+            if (prop.ModelType != typeof(bool))
+            {
+                <dt>@Html.Label(prop.PropertyName)</dt>
+            }
+            <dd>
+                @if (prop.AdditionalValues.ContainsKey(DropDownListAttribute.Key))
+                {
+                    var dropDownListOptions = prop.AdditionalValues[DropDownListAttribute.Key] as Tuple<string, string, string>;
+                        
+                    if (dropDownListOptions == null)
+                    {
+                        throw new ArgumentNullException();
+                    }
+                            
+                    var sourceProperty = dropDownListOptions.Item1;
+                    var optionLabel = dropDownListOptions.Item2;
+                    var css = dropDownListOptions.Item3;
+
+                    var source = ViewData.ModelMetadata.Properties.First(x => x.PropertyName == sourceProperty).Model as IEnumerable<SelectListItem>;
+                            
+                    @Html.DropDownList(prop.PropertyName, source, optionLabel, new { @class = css + (prop.IsRequired ? " required" : "") })
+                }
+                else
+                {
+                    @Html.Display(prop.PropertyName, prop.TemplateHint)
+                }
+
+                @{
+                    var propertyName = prop.PropertyName;
+                    if (prop.AdditionalValues.ContainsKey("TargetPropertyAttribute"))
+                    {                  
+                        propertyName = (prop.AdditionalValues["TargetPropertyAttribute"] as TargetPropertyAttribute).TargetProperty;
+                    }
+                    
+                    var targetProp = ViewData.ModelMetadata.Properties.Single(p => p.PropertyName == propertyName);
+                    
+                    if (targetProp.GetValidators(controllerContext).Any()){
+                        <em>
+                            @Html.ValidationMessage(targetProp.PropertyName)
+                        </em>
+                    }
+                }
+            </dd>
+        }
+    }
+    </dl>
+}

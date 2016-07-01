@@ -1,0 +1,55 @@
+﻿@model IFilter
+@{Layout = null;}
+@functions{
+private string GetConditionTemplate(IFilterCondition condition)
+{
+    string type = condition.GetType().Name;
+    string result= type.IndexOf('`') > 0 ? type.Substring(0, type.Length - 2) : type;
+    return result;
+}
+}
+<div class="filter">
+@if(Model.AllowSave && Model.SavedFilters != null && Model.SavedFilters.Count() > 0)
+{
+  <div class="saved-filters">
+      <h2>Сохраненные фильтры</h2>
+      <ul class="submenu">
+      @foreach (var filter in Model.SavedFilters)
+       {
+            bool selected = filter.Id == Model.FilterId; 
+            if(selected)
+            {
+                <li class="selected">@Html.ActionLink(filter.Name, "LoadFilter", new {id=filter.Id})</li>
+            } 
+            else 
+            {
+                <li>@Html.ActionLink(filter.Name, "LoadFilter", new {id=filter.Id})</li>
+            }
+       }
+      </ul>
+  </div>
+}
+<div class="filter-settings">
+    <h2>Фильтр</h2> 
+    <div class="clear"></div>
+    @using (Html.BeginForm("Grid", ViewContext.RouteData.Values["controller"].ToString(), FormMethod.Post, new { id = "filterForm", @class = "ajax-form", targetupdate = ".mvcgridpanel" }))
+    {
+    <dl>
+        @{int index = 0;}
+        @foreach(var condition in Model.Conditions){
+            @Html.EditorFor(c => condition, GetConditionTemplate(condition), new { index = index })
+       index++;
+        } 
+    </dl>
+    <div class="btn-left">
+        <input type="submit" value="Применить" class="button" />
+        @Html.ActionLink("Сбросить", "ClearFilter", null, new { @class = "button" })
+    </div>
+    if (Model.AllowSave)
+    {
+    <button type="button" class="save-filter-button"></button>
+    }
+    }
+</div>
+@Html.EditorFor(m=>m.FilterEdit)
+</div>

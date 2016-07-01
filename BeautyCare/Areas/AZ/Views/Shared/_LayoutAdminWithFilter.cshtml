@@ -1,0 +1,57 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="shortcut icon" type="image/x-icon" href="@Url.Content("~/Content/Images/favicon.ico")"/>
+    <title>Калькулятор кузовного ремонта - Административная зона</title>
+    @Styles.Render("~/Content/themes/base/jqueryui")
+    @Styles.Render("~/Scripts/AZ/bootstrap-3.3.5-dist/css/bootstrap.min.css")
+    @Styles.Render("~/Scripts/AZ/bootstrap-datetimepicker/bootstrap-datetimepicker.min.css")
+    @Styles.Render("~/Scripts/AZ/bootstrap-multiselect-master/bootstrap-multiselect.css")
+    @Styles.Render("~/Content/Css/az")
+    @Scripts.Render("~/Scripts/jquery")
+    @Scripts.Render("~/Scripts/jqueryui")
+    @Scripts.Render("~/Scripts/jqueryval")
+    @Scripts.Render("~/Scripts/AZ/bootstrap-datetimepicker/moment-with-locales.js")
+    @Scripts.Render("~/Scripts/AZ/bootstrap-3.3.5-dist/js/bootstrap.min.js")
+    @Scripts.Render("~/Scripts/AZ/bootstrap-datetimepicker/bootstrap-datetimepicker.js")
+    @Scripts.Render("~/Scripts/AZ/bootstrap-multiselect-master/bootstrap-multiselect.js")
+    @Scripts.Render("~/Scripts/az-script")    
+
+    @RenderSection("CustomScripts", false)
+    @RenderSection("CustomCss", false)
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <img class="logo" src="~/Content/Images/Front/desktop/logo-desktop.png" />
+            <h1> 
+                Mercedes-Benz Test-drive
+            </h1>
+            <div class="clear"></div>
+            <div id="menu">
+                @Html.MvcSiteMap("AdminSiteMap").Menu("MenuHelper")
+            </div>
+            <div id="user-data">
+                @{Html.RenderPartial("_UserInfoPartial");}
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div id="body">
+            <div id="content-right-filter">
+                <div id="contentbody">
+                    @RenderBody()
+                </div>
+            </div>
+            <div class="right-sidebar-filter-header">
+                <h2>Фильтр</h2> 
+                <button class="showHideFilter">Скрыть фильтр</button>
+            </div>
+            <div id="right-sidebar-filter">
+                @RenderSection("RightSideBar", false)
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</body>
+</html>

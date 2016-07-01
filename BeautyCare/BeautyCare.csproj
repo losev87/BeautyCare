@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6680B272-144C-4A46-8657-B44DD711EACE}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BeautyCare</RootNamespace>
+    <AssemblyName>BeautyCare</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MvcSiteMapProvider, Version=4.6.22.0, Culture=neutral, PublicKeyToken=1923abe4657913cc, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvcSiteMapProvider.MVC5.Core.4.6.22\lib\net45\MvcSiteMapProvider.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MvcSiteMapProvider.WebActivator, Version=4.6.22.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvcSiteMapProvider.MVC5.4.6.22\lib\net45\MvcSiteMapProvider.WebActivator.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.1\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <Private>True</Private>
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebActivatorEx.2.0.1\lib\net40\WebActivatorEx.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Areas\AZ\Views\web.config" />
+    <Content Include="Areas\AZ\Views\Account\ChangePassword.cshtml" />
+    <Content Include="Areas\AZ\Views\Account\Login.cshtml" />
+    <Content Include="Areas\AZ\Views\User\CreateUser.cshtml" />
+    <Content Include="Areas\AZ\Views\User\Index.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\Create.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\DisplayTemplates\Boolean.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\DisplayTemplates\Boolean1.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\DisplayTemplates\BreakBlock.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\DisplayTemplates\DropDownList.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\DisplayTemplates\HeadText.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\DisplayTemplates\MenuHelperModel.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\DisplayTemplates\NullableText.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\DisplayTemplates\Object.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\DisplayTemplates\SelectedCar.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\DisplayTemplates\ShowImage.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\DisplayTemplates\SiteMapNodeModel.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\DisplayTemplates\SiteMapNodeModelList.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\Edit.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\EditorTemplates\1Object.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\EditorTemplates\AdvancedDropDownList.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\EditorTemplates\AutocompleteField.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\EditorTemplates\BeforeConsentInfo.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\EditorTemplates\Boolean.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\EditorTemplates\BoolFilterCondition.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\EditorTemplates\BreakBlock.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\EditorTemplates\Captcha.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\EditorTemplates\CategoryMultipleSelect.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\EditorTemplates\CheckList.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\EditorTemplates\Color.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\EditorTemplates\Date.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\EditorTemplates\DateFilterCondition.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\EditorTemplates\DateInput.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\EditorTemplates\DateTime.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\EditorTemplates\DealerFormCounter.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\EditorTemplates\Decimal.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\EditorTemplates\DependentDropDownList.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\EditorTemplates\Double.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\EditorTemplates\DropDownList.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\EditorTemplates\FilterEdit.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\EditorTemplates\Header.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\EditorTemplates\HeadText.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\EditorTemplates\HttpPostedFileBase.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\EditorTemplates\Int32.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\EditorTemplates\MultipleDropDownList.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\EditorTemplates\MultipleSelect.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\EditorTemplates\NullableText.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\EditorTemplates\NumericFilterCondition.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\EditorTemplates\Object.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\EditorTemplates\OneToMany.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\EditorTemplates\Password.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\EditorTemplates\PhoneMask.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\EditorTemplates\RadioList.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\EditorTemplates\SearchOptions.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\EditorTemplates\Select.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\EditorTemplates\SelectedCar.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\EditorTemplates\SelectFilterCondition.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\EditorTemplates\ShowImage.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\EditorTemplates\ShowSmallImage.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\EditorTemplates\SingleSelectFilterCondition.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\EditorTemplates\String.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\EditorTemplates\StringFilterCondition.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\EditorTemplates\StringList.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\EditorTemplates\Text.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\EditorTemplates\Time.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\EditorTemplates\TokenInput.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\EditWithTab.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\Filter.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\Grid.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\Index.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\IndexDependent.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\IndexWithFilter.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\_Empty.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\_Excel.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\_LayoutAdmin.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\_LayoutAdminWithFilter.cshtml" />
+    <Content Include="Areas\AZ\Views\Shared\_UserInfoPartial.cshtml" />
+    <Content Include="Mvc.sitemap" />
+    <Content Include="Areas\AZ\Menu.sitemap" />
+    <None Include="MvcSiteMapSchema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\_RemoveAccountPartial.cshtml" />
+    <Content Include="Views\Account\_SetPasswordPartial.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Manage.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\SiteMapTitleHelperModel.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\SiteMapPathHelperModel.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\SiteMapNodeModelList.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\SiteMapNodeModel.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\SiteMapHelperModel.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\MetaRobotsHelperModel.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\MenuHelperModel.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\CanonicalHelperModel.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Footer.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Areas\AZ\Content\" />
+    <Folder Include="Areas\AZ\Fonts\" />
+    <Folder Include="Areas\AZ\Scripts\" />
+    <Folder Include="Areas\AZ\Styles\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BeautyCare.Configuration\BeautyCare.Configuration.csproj">
+      <Project>{948d10e6-0bb3-447d-8973-e66d75322825}</Project>
+      <Name>BeautyCare.Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IntraVision.Core\IntraVision.Core.csproj">
+      <Project>{ae8cbba5-a6da-4741-9f86-ab33b0dcb564}</Project>
+      <Name>IntraVision.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IntraVision.Web.Mvc\IntraVision.Web.Mvc.csproj">
+      <Project>{8eedd186-7922-4f1b-a5be-c6efe3dcf327}</Project>
+      <Name>IntraVision.Web.Mvc</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>61753</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://bc.my</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
