@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using BeautyCare.Model.Management;
-using IntraVision.Data;
+﻿using BeautyCare.Model.Management;
 
 namespace BeautyCare.Model.Entity
 {

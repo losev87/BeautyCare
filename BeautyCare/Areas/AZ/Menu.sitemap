@@ -4,9 +4,7 @@
             xsi:schemaLocation="http://mvcsitemap.codeplex.com/schemas/MvcSiteMap-File-4.0 MvcSiteMapSchema.xsd">
 
   <mvcSiteMapNode clickable="false" title=" ">
-    <mvcSiteMapNode title="Заявки" area="AZ" controller="Order" action="Index" roles="Administrator" />
-    <mvcSiteMapNode title="Классы" area="AZ" controller="MbClass" action="Index" roles="Administrator" />
-    <mvcSiteMapNode title="Детали" area="AZ" controller="Detail" action="Index" roles="Administrator" />
     <mvcSiteMapNode title="Пользователи" area="AZ" controller="User" action="Index" roles="Administrator" />
+    <mvcSiteMapNode title="Категории вложений" area="AZ" controller="AttachmentCategory" action="Index" roles="Administrator" />
   </mvcSiteMapNode>
 </mvcSiteMap>

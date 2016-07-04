@@ -68,6 +68,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AZ\AttachmentCategory\AttachmentCategoryGrid.cs" />
+    <Compile Include="AZ\AttachmentCategory\AttachmentCategoryGridOptions.cs" />
     <Compile Include="AZ\ChangePasswordModel.cs" />
     <Compile Include="AZ\User\UserCreate.cs" />
     <Compile Include="AZ\User\UserEdit.cs" />
@@ -81,6 +83,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BeautyCare.Model\BeautyCare.Model.csproj">
+      <Project>{4cc07490-28c9-4e6b-9b2e-3200c7af7507}</Project>
+      <Name>BeautyCare.Model</Name>
+    </ProjectReference>
     <ProjectReference Include="..\IntraVision.Core\IntraVision.Core.csproj">
       <Project>{ae8cbba5-a6da-4741-9f86-ab33b0dcb564}</Project>
       <Name>IntraVision.Core</Name>

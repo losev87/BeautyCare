@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using System.Web;
 using Autofac;
-using BeautyCare.ContextManagement;
+using BeautyCare.Context;
 using BeautyCare.Model.Management;
 using BeautyCare.Service;
 using IntraVision.Core;
@@ -15,8 +15,8 @@ namespace BeautyCare.Configuration.Autofac.Modules
     {
         protected override void Load(ContainerBuilder builder)
         {
-            builder.RegisterType<UserStoreBase<ManagementContext, User, Role, IdentityUserLoginBase, UserRole, IdentityUserClaimBase>>().AsImplementedInterfaces().InstancePerRequest();
-            builder.RegisterType<RoleStoreBase<ManagementContext, User, Role, IdentityUserLoginBase, UserRole, IdentityUserClaimBase>>().AsImplementedInterfaces().InstancePerRequest();
+            builder.RegisterType<UserStoreBase<BeautyCareContext, User, Role, IdentityUserLoginBase, UserRole, IdentityUserClaimBase>>().AsImplementedInterfaces().InstancePerRequest();
+            builder.RegisterType<RoleStoreBase<BeautyCareContext, User, Role, IdentityUserLoginBase, UserRole, IdentityUserClaimBase>>().AsImplementedInterfaces().InstancePerRequest();
 
             builder.Register(componentContext => HttpContext.Current.GetOwinContext().Authentication).As<IAuthenticationManager>().InstancePerRequest();
             builder.RegisterType<UserManager>().AsSelf().InstancePerRequest();

@@ -88,6 +88,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AZ\AZAreaRegistration.cs" />
+    <Compile Include="AZ\Controllers\AttachmentCategoryController.cs" />
     <Compile Include="AZ\Controllers\AccountController.cs" />
     <Compile Include="AZ\Controllers\UserController.cs" />
     <Compile Include="HomeController.cs" />

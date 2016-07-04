@@ -56,10 +56,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entity\BaseRatedMessage.cs" />
-    <Compile Include="Entity\BaseMessage.cs" />
-    <Compile Include="Entity\IBeautyCareRepository.cs" />
-    <Compile Include="Entity\BaseAttachment.cs" />
+    <Compile Include="Entity\Common\ColorCategory.cs" />
+    <Compile Include="Entity\Common\BaseCatalog.cs" />
+    <Compile Include="Entity\Common\BaseRatedMessage.cs" />
+    <Compile Include="Entity\Common\BaseMessage.cs" />
+    <Compile Include="Entity\Common\IBeautyCareRepository.cs" />
+    <Compile Include="Entity\Common\BaseAttachment.cs" />
+    <Compile Include="Entity\Common\HashTag.cs" />
+    <Compile Include="Entity\Common\ServiceType.cs" />
     <Compile Include="Entity\Order\OrderStatus.cs" />
     <Compile Include="Entity\Order\OrderMessageAttachmentData.cs" />
     <Compile Include="Entity\Order\OrderMessageAttachment.cs" />
@@ -71,9 +75,24 @@
     <Compile Include="Entity\PrivateMessage\PrivateMessageAttachmentData.cs" />
     <Compile Include="Entity\PrivateMessage\PrivateMessageAttachment.cs" />
     <Compile Include="Entity\PrivateMessage\PrivateMessage.cs" />
-    <Compile Include="Entity\AttachmentCategory.cs" />
-    <Compile Include="Entity\UserService.cs" />
-    <Compile Include="Entity\Publication.cs" />
+    <Compile Include="Entity\Common\AttachmentCategory.cs" />
+    <Compile Include="Entity\Publication\Comment.cs" />
+    <Compile Include="Entity\Publication\CommentAttachment.cs" />
+    <Compile Include="Entity\Publication\CommentAttachmentData.cs" />
+    <Compile Include="Entity\Publication\Publication.cs" />
+    <Compile Include="Entity\Publication\PublicationAttachment.cs" />
+    <Compile Include="Entity\Publication\PublicationAttachmentData.cs" />
+    <Compile Include="Entity\Question\Answer.cs" />
+    <Compile Include="Entity\Question\AnswerAttachment.cs" />
+    <Compile Include="Entity\Question\AnswerAttachmentData.cs" />
+    <Compile Include="Entity\Question\QuestionAttachment.cs" />
+    <Compile Include="Entity\Question\QuestionAttachmentData.cs" />
+    <Compile Include="Entity\User\UserPhoto.cs" />
+    <Compile Include="Entity\User\UserPhotoData.cs" />
+    <Compile Include="Entity\User\UserType.cs" />
+    <Compile Include="Entity\User\Gender.cs" />
+    <Compile Include="Entity\User\UserService.cs" />
+    <Compile Include="Entity\Question\Question.cs" />
     <Compile Include="Management\IManagementRepository.cs" />
     <Compile Include="Management\Permission.cs" />
     <Compile Include="Management\Role.cs" />

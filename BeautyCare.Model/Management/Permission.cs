@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using IntraVision.Data;
+using BeautyCare.Model.Entity;
+using IntraVision.Web.Mvc.Entities;
 
 namespace BeautyCare.Model.Management
 {
-    public class Permission : EntityBase
+    public class Permission : EntityBase, IBeautyCareRepository
     {
         [StringLength(100)]
         public string MvcController { get; set; }

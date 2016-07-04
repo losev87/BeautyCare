@@ -2,7 +2,7 @@
 
 namespace BeautyCare.Model.Entity
 {
-    public class OrderAttachmentData : EntityBaseFile, IBeautyCareRepository
+    public class UserPhotoData : EntityBaseFile, IBeautyCareRepository
     {
     }
 }

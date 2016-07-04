@@ -1,17 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using BeautyCare.Model.Management;
-using IntraVision.Data;
+﻿using System.Collections.Generic;
 
 namespace BeautyCare.Model.Entity
 {
-    public class OrderStatus : EntityBase, IBeautyCareRepository
+    public class OrderStatus : BaseCatalog, IBeautyCareRepository
     {
-        public string Name { get; set; }
-        public string SysName { get; set; }
-
         public virtual ICollection<Order> Orders { get; set; }
     }
 }

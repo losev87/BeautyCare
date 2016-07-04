@@ -16,13 +16,14 @@ namespace BeautyCare.Model.Management
         public DateTime BirthDate { get; set; }
         public virtual UserType UserType { get; set; }
         public int UserTypeId { get; set; }
+        public decimal Rating { get; set; }
         public virtual ICollection<UserService> UserServices { get; set; }
         public virtual ICollection<UserPhoto> UserPhotos { get; set; }
         public virtual ICollection<PrivateMessage> IncomingMessages { get; set; }
         public virtual ICollection<PrivateMessage> OutcomingMessages { get; set; }
         public virtual ICollection<Order> ExecutorOrders { get; set; }
         public virtual ICollection<Order> CustomerOrders { get; set; }
-        public virtual ICollection<OrderComment> OrderComments { get; set; }
+        public virtual ICollection<OrderMessage> OrderMessages { get; set; }
         public virtual ICollection<Publication> Publications { get; set; }
         public virtual ICollection<InsragramPublication> InsragramPublications { get; set; }
         public virtual ICollection<ServiceType> ServiceTypes { get; set; }
