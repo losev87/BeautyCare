@@ -4,7 +4,7 @@ using IntraVision.Data;
 
 namespace BeautyCare.Model.Management
 {
-    public class Permission : EntityBase, IManagementRepository
+    public class Permission : EntityBase
     {
         [StringLength(100)]
         public string MvcController { get; set; }

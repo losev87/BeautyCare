@@ -152,10 +152,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BeautyCare.ContextManagement\BeautyCare.ContextManagement.csproj">
-      <Project>{5c76ada3-eb9c-42ce-b101-c26cf2156a0e}</Project>
-      <Name>BeautyCare.ContextManagement</Name>
-    </ProjectReference>
     <ProjectReference Include="..\BeautyCare.Context\BeautyCare.Context.csproj">
       <Project>{adfc349f-7078-4ce0-8b9f-8b4a86bf8767}</Project>
       <Name>BeautyCare.Context</Name>

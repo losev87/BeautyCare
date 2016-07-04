@@ -56,7 +56,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entity\BaseRatedMessage.cs" />
+    <Compile Include="Entity\BaseMessage.cs" />
     <Compile Include="Entity\IBeautyCareRepository.cs" />
+    <Compile Include="Entity\BaseAttachment.cs" />
+    <Compile Include="Entity\Order\OrderStatus.cs" />
+    <Compile Include="Entity\Order\OrderMessageAttachmentData.cs" />
+    <Compile Include="Entity\Order\OrderMessageAttachment.cs" />
+    <Compile Include="Entity\Order\OrderUserService.cs" />
+    <Compile Include="Entity\Order\Order.cs" />
+    <Compile Include="Entity\Order\OrderAttachment.cs" />
+    <Compile Include="Entity\Order\OrderMessage.cs" />
+    <Compile Include="Entity\Order\OrderAttachmentData.cs" />
+    <Compile Include="Entity\PrivateMessage\PrivateMessageAttachmentData.cs" />
+    <Compile Include="Entity\PrivateMessage\PrivateMessageAttachment.cs" />
+    <Compile Include="Entity\PrivateMessage\PrivateMessage.cs" />
+    <Compile Include="Entity\AttachmentCategory.cs" />
+    <Compile Include="Entity\UserService.cs" />
     <Compile Include="Entity\Publication.cs" />
     <Compile Include="Management\IManagementRepository.cs" />
     <Compile Include="Management\Permission.cs" />

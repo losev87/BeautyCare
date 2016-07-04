@@ -2,10 +2,8 @@
 using Autofac.Integration.Mvc;
 using BeautyCare.Configuration.Autofac.Modules;
 using BeautyCare.Context;
-using BeautyCare.ContextManagement;
 using BeautyCare.Controllers.AZ;
 using BeautyCare.Model.Entity;
-using BeautyCare.Model.Management;
 using BeautyCare.Service;
 using BeautyCare.ViewModel.AZ.User;
 using IntraVision.Web.Mvc.Autofac;
@@ -20,8 +18,6 @@ namespace BeautyCare.Configuration.Autofac
         {
             var container = new ContainerAutofacDependencyResolver(
                 new ModuleRegisterContext<BeautyCareContext>(),
-                new ModuleRegisterContext<ManagementContext>(),
-                new ModuleRegisterBaseRepository<IManagementRepository, ManagementContext>(),
                 new ModuleRegisterBaseRepository<IBeautyCareRepository, BeautyCareContext>(),
                 new ModuleRegisterBaseServices(),
                 new ModuleRegisterController<AccountController>(),

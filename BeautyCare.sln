@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeautyCare.Model", "BeautyC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeautyCare.Context", "BeautyCare.Context\BeautyCare.Context.csproj", "{ADFC349F-7078-4CE0-8B9F-8B4A86BF8767}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeautyCare.ContextManagement", "BeautyCare.ContextManagement\BeautyCare.ContextManagement.csproj", "{5C76ADA3-EB9C-42CE-B101-C26CF2156A0E}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeautyCare.Configuration", "BeautyCare.Configuration\BeautyCare.Configuration.csproj", "{948D10E6-0BB3-447D-8973-E66D75322825}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeautyCare.Controllers", "BeautyCare.Controllers\BeautyCare.Controllers.csproj", "{BECA4E67-2D74-4A8B-ACDD-FC820F16AEA2}"
@@ -41,10 +39,6 @@ Global
 		{ADFC349F-7078-4CE0-8B9F-8B4A86BF8767}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ADFC349F-7078-4CE0-8B9F-8B4A86BF8767}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ADFC349F-7078-4CE0-8B9F-8B4A86BF8767}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5C76ADA3-EB9C-42CE-B101-C26CF2156A0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5C76ADA3-EB9C-42CE-B101-C26CF2156A0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5C76ADA3-EB9C-42CE-B101-C26CF2156A0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5C76ADA3-EB9C-42CE-B101-C26CF2156A0E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{948D10E6-0BB3-447D-8973-E66D75322825}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{948D10E6-0BB3-447D-8973-E66D75322825}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{948D10E6-0BB3-447D-8973-E66D75322825}.Release|Any CPU.ActiveCfg = Release|Any CPU
