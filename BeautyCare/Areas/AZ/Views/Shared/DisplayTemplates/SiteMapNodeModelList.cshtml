@@ -2,21 +2,36 @@
 
 @{
     var children = new SiteMapNodeModelList();
-    var currentController = ViewContext.RouteData.Values["controller"].ToString();
+    var routeDataController = ViewContext.RouteData.Values["controller"].ToString();
 }
-<ul class="second-lvl-menu clearfix">
-    @foreach (var node in Model)
-    {
-        <li @(node.IsCurrentNode || node.IsInCurrentPath || currentController == node.Controller ? "class=selected" : "")>
-            @Html.DisplayFor(m => node)
-
-        </li>
-        if (node.Children.Any() && node.IsInCurrentPath)
-        {
-            children = node.Children;
+<div class="submenu">
+    <ul>
+        @{
+            var count = 0;
         }
-    }
-</ul>
+        @foreach (var node in Model) {
+            var cssclass = 
+              node.IsCurrentNode ||
+              node.IsInCurrentPath ||
+              node.Controller.Equals(routeDataController, StringComparison.InvariantCultureIgnoreCase) ||
+              node.Children.Any(n => n.Controller.Equals(routeDataController, StringComparison.InvariantCultureIgnoreCase) ||
+                                     n.Children.Any(nc => nc.Controller.Equals(routeDataController, StringComparison.InvariantCultureIgnoreCase) || 
+                                                          nc.Children.Any(ncc =>  ncc.Controller.Equals(routeDataController, StringComparison.InvariantCultureIgnoreCase)))) ? "selected" : "";
+            cssclass += count == 0 ? " first" : "";
+            <li class="@cssclass">
+                @Html.DisplayFor(m => node)
+            </li>
+            if (node.Children.Any() &&
+                (node.IsInCurrentPath || node.Children.Any(n => n.Controller.Equals(routeDataController, StringComparison.InvariantCultureIgnoreCase) || 
+                                                                n.Children.Any(nc => nc.Controller.Equals(routeDataController, StringComparison.InvariantCultureIgnoreCase) || 
+                                                                               nc.Children.Any(ncc => ncc.Controller.Equals(routeDataController, StringComparison.InvariantCultureIgnoreCase))))))
+            {
+                children=node.Children;
+            }
+            count++;
+        }
+    </ul>
+</div>
 <div class="clear"></div>
 @if (children.Count > 0)
 {

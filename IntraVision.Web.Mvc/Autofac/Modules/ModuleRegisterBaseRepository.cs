@@ -16,6 +16,11 @@ namespace IntraVision.Web.Mvc.Autofac.Modules
                 .Where(t => typeof(TEntityContext).IsAssignableFrom(t)
                             && typeof(IEntityBase).IsAssignableFrom(t))
                 .ForEach(t => builder.RegisterType(typeof (BaseRepository<,>).MakeGenericType(typeContext, t)).As(typeof (IRepository<>).MakeGenericType(t)));
+
+            typeof(TEntityContext).Assembly.GetTypes()
+                .Where(t => typeof(TEntityContext).IsAssignableFrom(t)
+                            && typeof(EntityBaseFile).IsAssignableFrom(t))
+                .ForEach(t => builder.RegisterType(t).AsSelf());
         }
     }
 }

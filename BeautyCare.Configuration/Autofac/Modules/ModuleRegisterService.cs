@@ -21,9 +21,7 @@ namespace BeautyCare.Configuration.Autofac.Modules
             builder.Register(componentContext => HttpContext.Current.GetOwinContext().Authentication).As<IAuthenticationManager>().InstancePerRequest();
             builder.RegisterType<UserManager>().AsSelf().InstancePerRequest();
             builder.RegisterType<RoleManagerBase<User, Role, IdentityUserLoginBase, UserRole, IdentityUserClaimBase>>().AsSelf().InstancePerRequest();
-
-            builder.RegisterType<UserService>().AsImplementedInterfaces();
-
+            
             typeof(TServiceImplementationInterface).Assembly.GetTypes()
                 .Where(t => typeof(TServiceImplementationInterface).IsAssignableFrom(t))
                 .ForEach(t => builder.RegisterType(t).AsImplementedInterfaces());

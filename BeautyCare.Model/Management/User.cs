@@ -12,7 +12,7 @@ namespace BeautyCare.Model.Management
         public string FirstName { get; set; }
         public string PatronimicName { get; set; }
         public virtual Gender Gender { get; set; }
-        public int GenderId { get; set; }
+        public int? GenderId { get; set; }
         public DateTime BirthDate { get; set; }
         public virtual UserType UserType { get; set; }
         public int UserTypeId { get; set; }
@@ -25,7 +25,7 @@ namespace BeautyCare.Model.Management
         public virtual ICollection<Order> CustomerOrders { get; set; }
         public virtual ICollection<OrderMessage> OrderMessages { get; set; }
         public virtual ICollection<Publication> Publications { get; set; }
-        public virtual ICollection<InsragramPublication> InsragramPublications { get; set; }
+        //todo public virtual ICollection<InsragramPublication> InsragramPublications { get; set; }
         public virtual ICollection<ServiceType> ServiceTypes { get; set; }
         public virtual ICollection<User> Friends { get; set; }
         public virtual ICollection<User> Followers { get; set; }

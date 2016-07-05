@@ -1,24 +1,33 @@
-﻿@model MvcSiteMapProvider.Web.Html.Models.MenuHelperModel
-@using System.Web.Mvc.Html
-@using MvcSiteMapProvider.Web.Html.Models
+﻿@model MenuHelperModel
 
 @{
-    SiteMapNodeModelList children = null;
-    var currentController = ViewContext.RouteData.Values["controller"].ToString();
+    var children = new SiteMapNodeModelList();
+    var routeDataController = ViewContext.RouteData.Values["controller"].ToString();
 }
-<ul>
-    @foreach (var node in Model.Nodes) { 
-        <li @(node.IsCurrentNode || node.IsInCurrentPath || node.Controller == currentController ? "class=selected" : "")>
-            @Html.DisplayFor(m => node) 
+<ul class="menu clearfix">
+    @foreach (var node in Model.Nodes) {
+        <li @(node.IsCurrentNode || 
+              node.IsInCurrentPath || 
+              node.Controller.Equals(routeDataController,StringComparison.InvariantCultureIgnoreCase) ||
+              node.Children.Any(n => n.Controller.Equals(routeDataController, StringComparison.InvariantCultureIgnoreCase) || 
+                                     n.IsInCurrentPath ||
+                                     n.Children.Any(nc => nc.Controller.Equals(routeDataController, StringComparison.InvariantCultureIgnoreCase) || 
+                                                          nc.IsInCurrentPath ||
+                                                          nc.Children.Any(ncc => ncc.IsInCurrentPath || 
+                                                                                 ncc.Controller.Equals(routeDataController,StringComparison.InvariantCultureIgnoreCase)))) ? "class=selected" : "")>
+            @Html.DisplayFor(m => node)
         </li>
-        if (node.Children.Any() && (node.IsInCurrentPath || node.Children.Any(n => currentController == n.Controller)))
+        if (node.Children.Any() &&
+            (node.IsInCurrentPath || node.Children.Any(n => n.Controller.Equals(routeDataController, StringComparison.InvariantCultureIgnoreCase) ||
+                                                            n.Children.Any(nc => nc.Controller.Equals(routeDataController, StringComparison.InvariantCultureIgnoreCase) || 
+                                                                           nc.Children.Any(ncc=> ncc.Controller.Equals(routeDataController, StringComparison.InvariantCultureIgnoreCase))))))
         {
             children = node.Children;
         }
     }
 </ul>
 <div class="clear"></div>
-@if (children != null && children.Count > 0)
+@if (children.Count > 0)
 {
     @Html.DisplayFor(m => children)
 }
