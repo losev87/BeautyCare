@@ -88,9 +88,28 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AZ\AZAreaRegistration.cs" />
-    <Compile Include="AZ\Controllers\AttachmentCategoryController.cs" />
-    <Compile Include="AZ\Controllers\AccountController.cs" />
-    <Compile Include="AZ\Controllers\UserController.cs" />
+    <Compile Include="AZ\Controllers\Order\OrderMessageController.cs" />
+    <Compile Include="AZ\Controllers\Publication\CommentController.cs" />
+    <Compile Include="AZ\Controllers\Question\AnswerController.cs" />
+    <Compile Include="AZ\Controllers\Question\AnswerAttachmentController.cs" />
+    <Compile Include="AZ\Controllers\Question\QuestionAttachmentController.cs" />
+    <Compile Include="AZ\Controllers\Common\DependentEntityCRUDController`5.cs" />
+    <Compile Include="AZ\Controllers\Common\DependentEntityFileCRUDController`5.cs" />
+    <Compile Include="AZ\Controllers\Publication\CommentAttachmentController.cs" />
+    <Compile Include="AZ\Controllers\Publication\PublicationAttachmentController.cs" />
+    <Compile Include="AZ\Controllers\Order\OrderMessageAttachmentController.cs" />
+    <Compile Include="AZ\Controllers\PrivateMessage\PrivateMessageAttachmentController.cs" />
+    <Compile Include="AZ\Controllers\Order\OrderAttachmentController.cs" />
+    <Compile Include="AZ\Controllers\Question\QuestionController.cs" />
+    <Compile Include="AZ\Controllers\Publication\PublicationController.cs" />
+    <Compile Include="AZ\Controllers\PrivateMessage\PrivateMessageController.cs" />
+    <Compile Include="AZ\Controllers\Order\OrderController.cs" />
+    <Compile Include="AZ\Controllers\Common\ServiceTypeController.cs" />
+    <Compile Include="AZ\Controllers\Common\HashTagController.cs" />
+    <Compile Include="AZ\Controllers\Common\ColorCategoryController.cs" />
+    <Compile Include="AZ\Controllers\Common\AttachmentCategoryController.cs" />
+    <Compile Include="AZ\Controllers\Common\AccountController.cs" />
+    <Compile Include="AZ\Controllers\Common\UserController.cs" />
     <Compile Include="HomeController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
