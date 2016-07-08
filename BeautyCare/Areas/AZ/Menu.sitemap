@@ -4,7 +4,19 @@
             xsi:schemaLocation="http://mvcsitemap.codeplex.com/schemas/MvcSiteMap-File-4.0 MvcSiteMapSchema.xsd">
 
   <mvcSiteMapNode clickable="false" title=" ">
+    <mvcSiteMapNode title="Справочники" area="AZ" controller="AttachmentCategory" action="Index" roles="Administrator" >
+      <mvcSiteMapNode title="Категории вложений" area="AZ" controller="AttachmentCategory" action="Index" roles="Administrator" />
+      <mvcSiteMapNode title="Цветовые" area="AZ" controller="ColorCategory" action="Index" roles="Administrator" />
+      <mvcSiteMapNode title="#Хеш-тэги" area="AZ" controller="HashTag" action="Index" roles="Administrator" />
+      <mvcSiteMapNode title="Типы услуг" area="AZ" controller="ServiceType" action="Index" roles="Administrator" />
+    </mvcSiteMapNode>
+    <mvcSiteMapNode title="Публикации" area="AZ" controller="Publication" action="Index" roles="Administrator" />
+    <mvcSiteMapNode title="Комментарии" area="AZ" controller="Comment" action="Index" roles="Administrator" />
+    <mvcSiteMapNode title="Заказы" area="AZ" controller="Order" action="Index" roles="Administrator" />
+    <mvcSiteMapNode title="Сообщения к заказу" area="AZ" controller="OrderMessage" action="Index" roles="Administrator" />
+    <mvcSiteMapNode title="Вопросы" area="AZ" controller="Question" action="Index" roles="Administrator" />
+    <mvcSiteMapNode title="Ответы" area="AZ" controller="Answer" action="Index" roles="Administrator" />
+    <mvcSiteMapNode title="Личные сообщения" area="AZ" controller="PrivateMessage" action="Index" roles="Administrator" />
     <mvcSiteMapNode title="Пользователи" area="AZ" controller="User" action="Index" roles="Administrator" />
-    <mvcSiteMapNode title="Категории вложений" area="AZ" controller="AttachmentCategory" action="Index" roles="Administrator" />
   </mvcSiteMapNode>
 </mvcSiteMap>

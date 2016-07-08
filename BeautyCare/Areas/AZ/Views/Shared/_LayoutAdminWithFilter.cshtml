@@ -3,19 +3,15 @@
 <head>
     <link rel="shortcut icon" type="image/x-icon" href="@Url.Content("~/Content/Images/favicon.ico")"/>
     <title>Калькулятор кузовного ремонта - Административная зона</title>
-    @Styles.Render("~/Content/themes/base/jqueryui")
-    @Styles.Render("~/Scripts/AZ/bootstrap-3.3.5-dist/css/bootstrap.min.css")
-    @Styles.Render("~/Scripts/AZ/bootstrap-datetimepicker/bootstrap-datetimepicker.min.css")
-    @Styles.Render("~/Scripts/AZ/bootstrap-multiselect-master/bootstrap-multiselect.css")
-    @Styles.Render("~/Content/Css/az")
-    @Scripts.Render("~/Scripts/jquery")
-    @Scripts.Render("~/Scripts/jqueryui")
-    @Scripts.Render("~/Scripts/jqueryval")
-    @Scripts.Render("~/Scripts/AZ/bootstrap-datetimepicker/moment-with-locales.js")
-    @Scripts.Render("~/Scripts/AZ/bootstrap-3.3.5-dist/js/bootstrap.min.js")
-    @Scripts.Render("~/Scripts/AZ/bootstrap-datetimepicker/bootstrap-datetimepicker.js")
-    @Scripts.Render("~/Scripts/AZ/bootstrap-multiselect-master/bootstrap-multiselect.js")
-    @Scripts.Render("~/Scripts/az-script")    
+    @Styles.Render("~/Areas/AZ/Styles/jqueryui/css")
+@Styles.Render("~/Areas/AZ/Styles/bootstrap/css/css")
+@Styles.Render("~/Areas/AZ/Styles/css")
+
+@Scripts.Render("~/Areas/AZ/Scripts/jquery")
+@Scripts.Render("~/Areas/AZ/Scripts/jqueryui")
+@Scripts.Render("~/Areas/AZ/Scripts/jqueryval")
+@Scripts.Render("~/Areas/AZ/Scripts/bootstrap")
+@Scripts.Render("~/Areas/AZ/Scripts/az")   
 
     @RenderSection("CustomScripts", false)
     @RenderSection("CustomCss", false)
@@ -23,7 +19,7 @@
 <body>
     <div id="container">
         <div id="header">
-            <img class="logo" src="~/Content/Images/Front/desktop/logo-desktop.png" />
+            <img class="logo" src="~/Areas/AZ/Content/logo.gif" />
             <h1> 
                 Mercedes-Benz Test-drive
             </h1>

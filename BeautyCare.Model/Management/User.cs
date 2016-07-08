@@ -14,8 +14,8 @@ namespace BeautyCare.Model.Management
         public virtual Gender Gender { get; set; }
         public int? GenderId { get; set; }
         public DateTime BirthDate { get; set; }
-        public virtual UserType UserType { get; set; }
-        public int UserTypeId { get; set; }
+        //public virtual UserType UserType { get; set; }
+        //public int UserTypeId { get; set; }
         public decimal Rating { get; set; }
         public virtual ICollection<UserService> UserServices { get; set; }
         public virtual ICollection<UserPhoto> UserPhotos { get; set; }

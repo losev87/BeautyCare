@@ -30,6 +30,22 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
       <Private>True</Private>
@@ -68,9 +84,46 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AZ\AttachmentCategory\AttachmentCategoryGrid.cs" />
-    <Compile Include="AZ\AttachmentCategory\AttachmentCategoryGridOptions.cs" />
+    <Compile Include="AZ\Common\ServiceTypeGrid.cs" />
+    <Compile Include="AZ\Common\ServiceTypeGridOptions.cs" />
+    <Compile Include="AZ\Common\HashTagGrid.cs" />
+    <Compile Include="AZ\Common\HashTagGridOptions.cs" />
+    <Compile Include="AZ\Common\ColorCategoryGrid.cs" />
+    <Compile Include="AZ\Common\ColorCategoryGridOptions.cs" />
+    <Compile Include="AZ\Common\AttachmentCategoryGrid.cs" />
+    <Compile Include="AZ\Common\AttachmentCategoryGridOptions.cs" />
     <Compile Include="AZ\ChangePasswordModel.cs" />
+    <Compile Include="AZ\Order\OrderFilter.cs" />
+    <Compile Include="AZ\Order\OrderMessageAttachmentGrid.cs" />
+    <Compile Include="AZ\Order\OrderMessageAttachmentGridOptions.cs" />
+    <Compile Include="AZ\Order\OrderMessageGrid.cs" />
+    <Compile Include="AZ\Order\OrderMessageGridOptions.cs" />
+    <Compile Include="AZ\Order\OrderAttachmentGrid.cs" />
+    <Compile Include="AZ\Order\OrderAttachmentGridOptions.cs" />
+    <Compile Include="AZ\Order\OrderGrid.cs" />
+    <Compile Include="AZ\Order\OrderGridOptions.cs" />
+    <Compile Include="AZ\Publication\CommentFilter.cs" />
+    <Compile Include="AZ\Question\AnswerAttachmentGrid.cs" />
+    <Compile Include="AZ\Question\AnswerAttachmentGridOptions.cs" />
+    <Compile Include="AZ\Question\AnswerFilter.cs" />
+    <Compile Include="AZ\Question\AnswerGrid.cs" />
+    <Compile Include="AZ\Question\AnswerGridOptions.cs" />
+    <Compile Include="AZ\Question\QuestionAttachmentGrid.cs" />
+    <Compile Include="AZ\Question\QuestionAttachmentGridOptions.cs" />
+    <Compile Include="AZ\Question\QuestionGrid.cs" />
+    <Compile Include="AZ\Question\QuestionGridOptions.cs" />
+    <Compile Include="AZ\Publication\CommentAttachmentGrid.cs" />
+    <Compile Include="AZ\Publication\PublicationAttachmentGrid.cs" />
+    <Compile Include="AZ\Publication\CommentAttachmentGridOptions.cs" />
+    <Compile Include="AZ\Publication\PublicationAttachmentGridOptions.cs" />
+    <Compile Include="AZ\Publication\CommentGrid.cs" />
+    <Compile Include="AZ\Publication\PublicationGrid.cs" />
+    <Compile Include="AZ\Publication\CommentGridOptions.cs" />
+    <Compile Include="AZ\Publication\PublicationGridOptions.cs" />
+    <Compile Include="AZ\PrivateMessage\PrivateMessageAttachmentGrid.cs" />
+    <Compile Include="AZ\PrivateMessage\PrivateMessageGrid.cs" />
+    <Compile Include="AZ\PrivateMessage\PrivateMessageAttachmentGridOptions.cs" />
+    <Compile Include="AZ\PrivateMessage\PrivateMessageGridOptions.cs" />
     <Compile Include="AZ\User\UserCreate.cs" />
     <Compile Include="AZ\User\UserEdit.cs" />
     <Compile Include="AZ\User\UserGrid.cs" />
@@ -96,6 +149,7 @@
       <Name>IntraVision.Web.Mvc</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
