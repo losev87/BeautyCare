@@ -1,4 +1,4 @@
-﻿namespace BeautyCare.ViewModel.AZ.User
+﻿namespace BeautyCare.ViewModel.AZ
 {
     public class UserView
     {

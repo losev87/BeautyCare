@@ -17,6 +17,11 @@ namespace BeautyCare.Model.Management
         //public virtual UserType UserType { get; set; }
         //public int UserTypeId { get; set; }
         public decimal Rating { get; set; }
+        public string InstagramId { get; set; }
+        public string VkId { get; set; }
+        public string TwitterId { get; set; }
+        public string FacebookId { get; set; }
+        public string OkId { get; set; }
         public virtual ICollection<UserService> UserServices { get; set; }
         public virtual ICollection<UserPhoto> UserPhotos { get; set; }
         public virtual ICollection<PrivateMessage> IncomingMessages { get; set; }
@@ -26,7 +31,6 @@ namespace BeautyCare.Model.Management
         public virtual ICollection<OrderMessage> OrderMessages { get; set; }
         public virtual ICollection<Publication> Publications { get; set; }
         //todo public virtual ICollection<InsragramPublication> InsragramPublications { get; set; }
-        public virtual ICollection<ServiceType> ServiceTypes { get; set; }
         public virtual ICollection<User> Friends { get; set; }
         public virtual ICollection<User> Followers { get; set; }
         public virtual ICollection<Question> Questions { get; set; }

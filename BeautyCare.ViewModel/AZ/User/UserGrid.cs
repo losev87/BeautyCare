@@ -1,7 +1,7 @@
 ﻿using System.Web.Mvc;
 using IntraVision.Web.Mvc.Controls;
 
-namespace BeautyCare.ViewModel.AZ.User
+namespace BeautyCare.ViewModel.AZ
 {
     public class UserGrid : GridModel<UserView>
     {

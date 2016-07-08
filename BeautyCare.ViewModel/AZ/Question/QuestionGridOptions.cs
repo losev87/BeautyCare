@@ -2,7 +2,7 @@
 using IntraVision.Core.Sorting;
 using IntraVision.Web.Mvc.Controls;
 
-namespace BeautyCare.ViewModel.AZ.User
+namespace BeautyCare.ViewModel.AZ
 {
     public class QuestionGridOptions : GridOptions
     {

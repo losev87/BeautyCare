@@ -2,7 +2,7 @@
 using BeautyCare.Model.Entity;
 using IntraVision.Web.Mvc.Controls;
 
-namespace BeautyCare.ViewModel.AZ.User
+namespace BeautyCare.ViewModel.AZ
 {
     public class PublicationAttachmentGrid : GridModel<PublicationAttachment>
     {

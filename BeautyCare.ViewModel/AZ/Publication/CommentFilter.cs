@@ -6,7 +6,7 @@ using IntraVision.Web.Mvc;
 using IntraVision.Web.Mvc.Autofac;
 using IntraVision.Web.Mvc.Controls;
 
-namespace BeautyCare.ViewModel.AZ.User
+namespace BeautyCare.ViewModel.AZ
 {
     public class CommentFilter : Filter<Comment>
     {

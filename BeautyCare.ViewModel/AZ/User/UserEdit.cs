@@ -2,7 +2,7 @@
 using System.Web.Mvc;
 using IntraVision.Web.Mvc.Attributes;
 
-namespace BeautyCare.ViewModel.AZ.User
+namespace BeautyCare.ViewModel.AZ
 {
     public class UserEdit
     {
