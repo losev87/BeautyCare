@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Security.Principal;
 using BeautyCare.Model.Management;
-using BeautyCare.ViewModel.AZ.User;
+using BeautyCare.ViewModel.AZ;
 using IntraVision.Web.Mvc.Controls;
 using Microsoft.AspNet.Identity;
 

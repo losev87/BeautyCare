@@ -1,5 +1,5 @@
 ﻿using System.Security.Principal;
-using BeautyCare.ViewModel.AZ.User;
+using BeautyCare.ViewModel.AZ;
 using IntraVision.Web.Mvc.Controls;
 
 namespace BeautyCare.Service

@@ -5,7 +5,6 @@ using BeautyCare.Model.Entity;
 using BeautyCare.Model.Management;
 using BeautyCare.Service;
 using BeautyCare.ViewModel.AZ;
-using BeautyCare.ViewModel.AZ.User;
 using IntraVision.Data;
 using IntraVision.Web.Mvc;
 using IntraVision.Web.Mvc.Services;

@@ -87,6 +87,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountController.cs" />
     <Compile Include="AZ\AZAreaRegistration.cs" />
     <Compile Include="AZ\Controllers\Order\OrderMessageController.cs" />
     <Compile Include="AZ\Controllers\Publication\CommentController.cs" />
@@ -108,7 +109,7 @@
     <Compile Include="AZ\Controllers\Common\HashTagController.cs" />
     <Compile Include="AZ\Controllers\Common\ColorCategoryController.cs" />
     <Compile Include="AZ\Controllers\Common\AttachmentCategoryController.cs" />
-    <Compile Include="AZ\Controllers\Common\AccountController.cs" />
+    <Compile Include="AZ\Controllers\AccountController.cs" />
     <Compile Include="AZ\Controllers\Common\UserController.cs" />
     <Compile Include="HomeController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

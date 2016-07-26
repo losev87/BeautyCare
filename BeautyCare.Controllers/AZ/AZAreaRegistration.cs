@@ -17,7 +17,8 @@ namespace BeautyCare.Controllers.AZ
             context.MapRoute(
                 "AZ_default",
                 "AZ/{controller}/{action}/{id}",
-                new { controller="User", action = "Index", id = UrlParameter.Optional }
+                new { controller="User", action = "Index", id = UrlParameter.Optional },
+                namespaces: new[] { "BeautyCare.Controllers.AZ" }
             );
         }
     }

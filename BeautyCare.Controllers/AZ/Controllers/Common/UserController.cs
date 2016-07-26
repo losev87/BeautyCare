@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Web.Mvc;
 using BeautyCare.Service;
-using BeautyCare.ViewModel.AZ.User;
+using BeautyCare.ViewModel.AZ;
+
 
 namespace BeautyCare.Controllers.AZ.Controllers
 {

@@ -5,7 +5,7 @@ using BeautyCare.Context;
 using BeautyCare.Controllers.AZ;
 using BeautyCare.Model.Entity;
 using BeautyCare.Service;
-using BeautyCare.ViewModel.AZ.User;
+using BeautyCare.ViewModel.AZ;
 using IntraVision.Web.Mvc.Autofac;
 using IntraVision.Web.Mvc.Autofac.Modules;
 using Owin;
